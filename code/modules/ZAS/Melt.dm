@@ -177,13 +177,20 @@
 /turf/simulated/New()
 	if (istext(material) && !istype(material))
 		material = SSmaterials.get_material_by_name(material)
-	if ((GAME_STATE > RUNLEVEL_LOBBY) && is_meltable())
-		check_tracking_zones()
 	..()
 
 /obj/New()
 	if (istext(material) && !istype(material))
 		material = SSmaterials.get_material_by_name(material)
+	..()
+
+
+/turf/simulated/Initialize()
 	if ((GAME_STATE > RUNLEVEL_LOBBY) && is_meltable())
 		check_tracking_zones()
-	..()
+	. = ..()
+
+/obj/Initialize()
+	if ((GAME_STATE > RUNLEVEL_LOBBY) && is_meltable())
+		check_tracking_zones()
+	. = ..()
