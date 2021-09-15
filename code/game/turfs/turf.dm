@@ -210,9 +210,6 @@ var/const/enterloopsanity = 100
 						thing.HasProximity(A, 1)
 	return
 
-/turf/proc/adjacent_fire_act(turf/simulated/floor/source, exposed_temperature, exposed_volume)
-	return
-
 /turf/proc/is_plating()
 	return 0
 

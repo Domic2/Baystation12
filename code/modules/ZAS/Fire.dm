@@ -182,9 +182,6 @@ turf/proc/hotspot_expose(exposed_temperature, exposed_volume, soh = 0)
 				if(prob( 50 + 50 * (firelevel/vsc.fire_firelevel_multiplier) ) && my_tile.CanPass(null, enemy_tile, 0,0) && enemy_tile.CanPass(null, my_tile, 0,0))
 					enemy_tile.create_fire(firelevel)
 
-			else
-				enemy_tile.adjacent_fire_act(loc, air_contents, air_contents.temperature, air_contents.volume)
-
 	animate(src, color = fire_color(air_contents.temperature), 5)
 	set_light(l_color = color)
 
