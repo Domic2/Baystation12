@@ -1204,6 +1204,13 @@
 	},
 /turf/simulated/floor/tiled/dark,
 /area/ship/perseverance/bridge/navigation)
+"go" = (
+/obj/effect/floor_decal/corner/green{
+	dir = 10
+	},
+/obj/machinery/light/small,
+/turf/simulated/floor/tiled,
+/area/ship/perseverance/midship/hydroponics)
 "gp" = (
 /obj/effect/floor_decal/corner/blue{
 	dir = 10
@@ -2258,9 +2265,6 @@
 /area/ship/perseverance/bridge/fhallway)
 "mm" = (
 /obj/machinery/smartfridge/drying_rack,
-/obj/machinery/light/small{
-	dir = 1
-	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/midship/hydroponics)
 "mn" = (
@@ -2302,6 +2306,9 @@
 /area/ship/perseverance/bridge/fhallway)
 "mB" = (
 /obj/machinery/chem_master/condimaster,
+/obj/machinery/light/small{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/midship/hydroponics)
 "mD" = (
@@ -2364,7 +2371,6 @@
 /area/ship/perseverance/ventilation/blue/aft)
 "mO" = (
 /obj/effect/floor_decal/corner/green/three_quarters,
-/obj/machinery/light/small,
 /turf/simulated/floor/tiled,
 /area/ship/perseverance/midship/hydroponics)
 "mS" = (
@@ -4685,6 +4691,9 @@
 /area/ship/perseverance/eng/fuelbay/upper)
 "wV" = (
 /obj/machinery/seed_extractor,
+/obj/machinery/light/small{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/midship/hydroponics)
 "wX" = (
@@ -31917,7 +31926,7 @@ wV
 mv
 uF
 uF
-no
+go
 RR
 RR
 RR
