@@ -4485,9 +4485,6 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/ventilation/blue/aft)
 "wa" = (
-/obj/effect/landmark/start{
-	name = "AI"
-	},
 /obj/item/device/radio/intercom{
 	dir = 8;
 	pixel_x = 22
@@ -4497,6 +4494,7 @@
 	pixel_x = -22
 	},
 /obj/machinery/light,
+/obj/structure/AIcore/deactivated,
 /turf/simulated/floor/greengrid,
 /area/ship/perseverance/bridge/aicore)
 "we" = (

@@ -4,7 +4,8 @@
 	fore_dir = NORTH
 	vessel_mass = 100000
 	burn_delay = 5 SECONDS
-	base = TRUE
+	hide_from_reports = TRUE
+	known = FALSE
 
 	initial_restricted_waypoints = list(
 		"Chimera" = list("nav_dock_mining"),
@@ -35,6 +36,7 @@
 	fore_dir = WEST
 	skill_needed = SKILL_BASIC
 	vessel_size = SHIP_SIZE_SMALL
+	moving_state = "ship_moving"
 
 /obj/effect/overmap/visitable/ship/landable/cargo
 	name = "XIV Marshal"

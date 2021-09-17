@@ -25,9 +25,6 @@
 	name = "Chimera Dock"
 	landmark_tag = "nav_dock_mining"
 	docking_controller = "chimera_shuttle_dock"
-	base_area = /area/space
-	base_turf = /turf/space
-	movable_flags = MOVABLE_FLAG_EFFECTMOVE
 
 /obj/effect/shuttle_landmark/perseverance/transit/mining
 	name = "In Transit"
@@ -60,9 +57,6 @@
 	name = "Marshal Dock"
 	landmark_tag = "nav_dock_cargo"
 	docking_controller = "marshal_shuttle_dock"
-	base_area = /area/space
-	base_turf = /turf/space
-	movable_flags = MOVABLE_FLAG_EFFECTMOVE
 
 /obj/effect/shuttle_landmark/perseverance/transit/cargo
 	name = "In Transit"
@@ -94,9 +88,6 @@
 	name = "Dagger Dock"
 	landmark_tag = "nav_dock_scout"
 	docking_controller = "dagger_shuttle_dock"
-	base_area = /area/space
-	base_turf = /turf/space
-	movable_flags = MOVABLE_FLAG_EFFECTMOVE
 
 /obj/effect/shuttle_landmark/perseverance/transit/scout
 	name = "In Transit"
@@ -129,9 +120,6 @@
 	name = "Phobos Dock"
 	landmark_tag = "nav_dock_science"
 	docking_controller = "phobos_shuttle_dock"
-	base_area = /area/space
-	base_turf = /turf/space
-	movable_flags = MOVABLE_FLAG_EFFECTMOVE
 
 /obj/effect/shuttle_landmark/perseverance/transit/science
 	name = "In Transit"
