@@ -2,7 +2,7 @@
 	name = "Blackbox"
 	icon = 'maps/away/perseverance/icons/obj/blackbox.dmi'
 	icon_state = "blackbox"
-	desc = "A sturdy machine which utilizes phoron to record subspace data without needing power, with a relatively long delay. It has been modified to interface with modern computers."
+	desc = "A sturdy machine which utilizes phoron to record subspace data without needing power. You're probably going to need to contact an antique shop if you want to extract its data."
 	density = 1
 	anchored = 1
 

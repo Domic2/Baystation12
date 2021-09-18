@@ -15,12 +15,14 @@
 /turf/simulated/floor/tiled,
 /area/ship/perseverance/fore/sciprep)
 "aaU" = (
-/obj/machinery/atmospherics/unary/vent_pump/tank/XIV/ventilation/outlet,
-/obj/machinery/light{
-	dir = 4
+/obj/effect/floor_decal/corner/blue/half{
+	dir = 8
 	},
-/turf/simulated/floor/plating,
-/area/ship/perseverance/eng/atmos_in)
+/obj/machinery/light/small{
+	dir = 8
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/ship/perseverance/hall/ehall/port)
 "abh" = (
 /obj/machinery/jukebox/old{
 	anchored = 0
@@ -508,6 +510,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/midship/storage)
+"aIh" = (
+/obj/effect/overmap/visitable/ship/Perseverance,
+/turf/space,
+/area/space)
 "aIr" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -888,12 +894,14 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/sec/bot/sfore)
 "bjs" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/effect/landmark{
-	name = "JoinLateCryo"
+/obj/effect/floor_decal/corner/blue/half{
+	dir = 4
 	},
-/turf/simulated/floor/tiled/white/monotile,
-/area/ship/perseverance/midship/cryos)
+/obj/machinery/light/small{
+	dir = 4
+	},
+/turf/simulated/floor/tiled/monotile,
+/area/ship/perseverance/hall/ehall/starboard)
 "bjC" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
 	dir = 4
@@ -981,9 +989,6 @@
 "bnR" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
-	},
-/obj/effect/landmark{
-	name = "JoinLateCryo"
 	},
 /obj/structure/vent/up/scrubbing,
 /turf/simulated/floor/tiled/white/monotile,
@@ -1407,15 +1412,6 @@
 	},
 /turf/simulated/floor/airless,
 /area/ship/perseverance/eng/fuelbay)
-"bUW" = (
-/obj/machinery/atmospherics/unary/vent_pump/tank/XIV/ventilation/outlet{
-	dir = 1
-	},
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/ship/perseverance/eng/atmos_in)
 "bVc" = (
 /obj/machinery/atmospherics/portables_connector,
 /obj/effect/floor_decal/industrial/outline/grey,
@@ -2403,7 +2399,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/sec/bot/pmid)
 "dvI" = (
-/obj/machinery/atmospherics/pipe/simple/visible/fuel,
+/obj/machinery/atmospherics/pipe/simple/visible/fuel/advanced,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay/starboard)
 "dws" = (
@@ -2447,10 +2443,10 @@
 /area/ship/perseverance/eng/atmos_out)
 "dyQ" = (
 /obj/structure/ladder/up,
+/obj/effect/floor_decal/industrial/warning,
 /obj/effect/floor_decal/corner/white/half{
 	dir = 8
 	},
-/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/eng/atmos_out)
 "dyU" = (
@@ -3245,6 +3241,7 @@
 "eLa" = (
 /obj/structure/ladder/up,
 /obj/machinery/atmospherics/pipe/manifold4w/visible/red,
+/obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_in)
 "eLb" = (
@@ -4067,6 +4064,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/sec/bot/pmid)
+"fPk" = (
+/obj/machinery/atmospherics/pipe/manifold4w/visible/red,
+/obj/machinery/air_sensor/XIV/ventilation_outlet,
+/turf/simulated/floor/plating,
+/area/ship/perseverance/eng/atmos_in)
 "fPt" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/atmospherics/binary/pump/high_power{
@@ -4832,9 +4834,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/effect/landmark{
-	name = "JoinLateCryo"
-	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/ship/perseverance/midship/cryop)
 "gOD" = (
@@ -5064,11 +5063,11 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/hall/shuthall/fport)
 "hda" = (
-/obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /obj/machinery/sparker{
 	id_tag = "C_8_igniter";
 	pixel_x = -24
 	},
+/obj/machinery/atmospherics/pipe/simple/visible/fuel/advanced,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay/starboard)
 "hdT" = (
@@ -5720,11 +5719,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/shuttle/perseverance/scouting)
 "ier" = (
-/obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /obj/machinery/sparker{
 	id_tag = "C_7_igniter";
 	pixel_x = -24
 	},
+/obj/machinery/atmospherics/pipe/simple/visible/fuel/advanced,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay/starboard)
 "ieY" = (
@@ -6172,10 +6171,10 @@
 /area/ship/perseverance/eng/atmos_in)
 "iLb" = (
 /obj/machinery/atmospherics/valve/open,
+/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/effect/floor_decal/corner/white/half{
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/light{
 	dir = 4
 	},
@@ -6489,9 +6488,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
 	},
-/obj/effect/landmark{
-	name = "JoinLateCryo"
-	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/ship/perseverance/midship/cryop)
 "jdz" = (
@@ -6742,6 +6738,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/reactor)
+"jAl" = (
+/obj/machinery/atmospherics/unary/vent_pump/tank/XIV/ventilation/inlet,
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/ship/perseverance/eng/atmos_out)
 "jBF" = (
 /obj/structure/catwalk,
 /obj/structure/cable{
@@ -7007,7 +7008,9 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/red{
 	dir = 8
 	},
-/obj/effect/catwalk_plated,
+/obj/machinery/light{
+	dir = 8
+	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_in)
 "jTS" = (
@@ -7064,9 +7067,6 @@
 "jXG" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 8
-	},
-/obj/effect/landmark{
-	name = "JoinLateCryo"
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/ship/perseverance/midship/cryos)
@@ -7176,15 +7176,6 @@
 	},
 /turf/simulated/floor/tiled/white,
 /area/ship/perseverance/midship/canteen)
-"kcz" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/effect/landmark{
-	name = "JoinLateCryo"
-	},
-/turf/simulated/floor/tiled/white/monotile,
-/area/ship/perseverance/midship/cryop)
 "keo" = (
 /obj/structure/cable/yellow{
 	icon_state = "4-8"
@@ -7261,9 +7252,10 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/cargobay/aft)
 "kjZ" = (
-/obj/machinery/atmospherics/pipe/manifold4w/visible/cyan,
+/obj/machinery/atmospherics/unary/vent_pump/tank/XIV/ventilation/inlet{
+	dir = 1
+	},
 /obj/effect/catwalk_plated,
-/obj/machinery/air_sensor/XIV/ventilation_inlet,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_out)
 "kka" = (
@@ -7467,10 +7459,10 @@
 /area/ship/perseverance/midship/cryos)
 "ktH" = (
 /obj/machinery/atmospherics/valve/shutoff,
+/obj/effect/floor_decal/industrial/shutoff,
 /obj/effect/floor_decal/corner/blue/half{
 	dir = 4
 	},
-/obj/effect/floor_decal/industrial/shutoff,
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/eng/atmos_out)
 "kuo" = (
@@ -7538,13 +7530,6 @@
 /obj/effect/floor_decal/corner/yellow/full,
 /turf/simulated/floor/tiled,
 /area/ship/perseverance/cargobay/fore)
-"kwX" = (
-/obj/effect/floor_decal/industrial/warning,
-/obj/effect/landmark{
-	name = "JoinLateCryo"
-	},
-/turf/simulated/floor/tiled/white/monotile,
-/area/ship/perseverance/midship/cryop)
 "kxi" = (
 /obj/effect/floor_decal/industrial/warning,
 /obj/structure/cable/yellow{
@@ -7696,13 +7681,6 @@
 /obj/machinery/door/firedoor,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ship/perseverance/sec/bot/paft)
-"kLs" = (
-/obj/machinery/atmospherics/unary/vent_pump/tank/XIV/ventilation/inlet,
-/obj/machinery/light{
-	dir = 8
-	},
-/turf/simulated/floor/plating,
-/area/ship/perseverance/eng/atmos_out)
 "kNF" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 8
@@ -7840,6 +7818,11 @@
 	},
 /turf/simulated/floor/tiled/dark/monotile,
 /area/shuttle/perseverance/cargo)
+"kWx" = (
+/obj/machinery/atmospherics/unary/vent_pump/tank/XIV/ventilation/outlet,
+/obj/effect/catwalk_plated,
+/turf/simulated/floor/plating,
+/area/ship/perseverance/eng/atmos_in)
 "kYP" = (
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 9
@@ -7886,9 +7869,6 @@
 "laO" = (
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
-	},
-/obj/effect/landmark{
-	name = "JoinLateCryo"
 	},
 /turf/simulated/floor/tiled/white/monotile,
 /area/ship/perseverance/midship/cryos)
@@ -8812,6 +8792,7 @@
 /obj/machinery/atmospherics/portables_connector{
 	dir = 8
 	},
+/obj/machinery/portable_atmospherics/canister/hydrogen,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/reactor)
 "muW" = (
@@ -9091,6 +9072,11 @@
 	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/midship/storage)
+"mRw" = (
+/obj/machinery/atmospherics/pipe/manifold4w/visible/cyan,
+/obj/machinery/air_sensor/XIV/ventilation_inlet,
+/turf/simulated/floor/plating,
+/area/ship/perseverance/eng/atmos_out)
 "mRV" = (
 /obj/effect/floor_decal/corner/paleblue/half{
 	dir = 1
@@ -9371,15 +9357,6 @@
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/sec/bot/pstore)
-"nqB" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
-/obj/effect/landmark{
-	name = "JoinLateCryo"
-	},
-/turf/simulated/floor/tiled/white/monotile,
-/area/ship/perseverance/midship/cryos)
 "nqN" = (
 /obj/structure/catwalk,
 /obj/structure/cable{
@@ -9965,15 +9942,6 @@
 	},
 /turf/simulated/floor/airless,
 /area/ship/perseverance/eng/fuelbay)
-"ohq" = (
-/obj/machinery/atmospherics/unary/vent_pump/tank/XIV/ventilation/inlet{
-	dir = 1
-	},
-/obj/machinery/light{
-	dir = 4
-	},
-/turf/simulated/floor/plating,
-/area/ship/perseverance/eng/atmos_out)
 "oiw" = (
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
@@ -10424,11 +10392,11 @@
 /turf/simulated/floor/tiled/techfloor/grid,
 /area/shuttle/perseverance/science)
 "oNk" = (
-/obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /obj/machinery/sparker{
 	id_tag = "C_2_igniter";
 	pixel_x = -24
 	},
+/obj/machinery/atmospherics/pipe/simple/visible/fuel/advanced,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay/port)
 "oOG" = (
@@ -11081,12 +11049,12 @@
 /area/ship/perseverance/hall/ehall/port)
 "pKS" = (
 /obj/machinery/atmospherics/valve,
-/obj/effect/floor_decal/corner/white/half{
-	dir = 8
-	},
-/obj/effect/floor_decal/industrial/outline/yellow,
 /obj/machinery/alarm{
 	dir = 4
+	},
+/obj/effect/floor_decal/industrial/outline/yellow,
+/obj/effect/floor_decal/corner/white/half{
+	dir = 8
 	},
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/eng/atmos_out)
@@ -11334,12 +11302,6 @@
 "qcM" = (
 /turf/simulated/wall/r_wall/hull/white,
 /area/ship/perseverance/eng/fuelbay/port)
-"qeb" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/airlock/autoname/atmos,
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/dark/monotile,
-/area/ship/perseverance/eng/atmos_out)
 "qei" = (
 /obj/machinery/light/small{
 	dir = 8
@@ -11729,7 +11691,9 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
 	dir = 4
 	},
-/obj/effect/catwalk_plated,
+/obj/machinery/light{
+	dir = 4
+	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_out)
 "qLc" = (
@@ -12332,15 +12296,6 @@
 /obj/machinery/alarm,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/cargobay/aft)
-"rFp" = (
-/obj/effect/floor_decal/corner/blue/half{
-	dir = 4
-	},
-/obj/machinery/light/small{
-	dir = 4
-	},
-/turf/simulated/floor/tiled/monotile,
-/area/ship/perseverance/hall/ehall/starboard)
 "rFT" = (
 /obj/structure/ladder/up,
 /turf/simulated/floor/plating,
@@ -12496,7 +12451,7 @@
 /turf/simulated/floor/airless,
 /area/ship/perseverance/eng/fuelbay)
 "rNw" = (
-/obj/machinery/atmospherics/pipe/simple/visible/fuel,
+/obj/machinery/atmospherics/pipe/simple/visible/fuel/advanced,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay/port)
 "rOe" = (
@@ -12592,7 +12547,6 @@
 /area/ship/perseverance/eng/reactor)
 "rUG" = (
 /obj/structure/railing/mapped,
-/obj/machinery/portable_atmospherics/canister/hydrogen,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/reactor)
 "rVn" = (
@@ -14051,9 +14005,10 @@
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/eng/atmos_in)
 "unJ" = (
-/obj/machinery/atmospherics/pipe/manifold4w/visible/red,
+/obj/machinery/atmospherics/unary/vent_pump/tank/XIV/ventilation/outlet{
+	dir = 1
+	},
 /obj/effect/catwalk_plated,
-/obj/machinery/air_sensor/XIV/ventilation_outlet,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_in)
 "uoB" = (
@@ -14312,9 +14267,6 @@
 /obj/effect/floor_decal/industrial/warning{
 	dir = 4
 	},
-/obj/effect/landmark{
-	name = "JoinLateCryo"
-	},
 /obj/structure/vent/up/distribution,
 /turf/simulated/floor/tiled/white/monotile,
 /area/ship/perseverance/midship/cryop)
@@ -14571,6 +14523,7 @@
 "veC" = (
 /obj/structure/ladder/up,
 /obj/machinery/atmospherics/pipe/manifold4w/visible/cyan,
+/obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_out)
 "veJ" = (
@@ -14940,12 +14893,6 @@
 	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/midship/storage)
-"vzt" = (
-/obj/effect/floor_decal/industrial/hatch/yellow,
-/obj/machinery/door/airlock/autoname/atmos,
-/obj/machinery/door/firedoor,
-/turf/simulated/floor/tiled/dark/monotile,
-/area/ship/perseverance/eng/atmos_in)
 "vzx" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /turf/simulated/floor/reinforced/airless,
@@ -16589,11 +16536,11 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ship/perseverance/hall/shuthall/aport)
 "xKI" = (
-/obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /obj/machinery/sparker{
 	id_tag = "C_1_igniter";
 	pixel_x = -24
 	},
+/obj/machinery/atmospherics/pipe/simple/visible/fuel/advanced,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay/port)
 "xKO" = (
@@ -16899,15 +16846,6 @@
 "ycg" = (
 /turf/simulated/wall/r_wall/hull/white,
 /area/ship/perseverance/fore/miningprep)
-"yck" = (
-/obj/effect/floor_decal/corner/blue/half{
-	dir = 8
-	},
-/obj/machinery/light/small{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/monotile,
-/area/ship/perseverance/hall/ehall/port)
 "ycC" = (
 /obj/machinery/atmospherics/portables_connector{
 	dir = 1
@@ -17223,7 +17161,7 @@ lEc
 lEc
 lEc
 lEc
-lEc
+aIh
 "}
 (2,1,1) = {"
 lEc
@@ -31695,7 +31633,7 @@ fYf
 tio
 bPx
 dfr
-kLs
+tio
 foW
 dfr
 tio
@@ -32098,11 +32036,11 @@ gBp
 nZu
 tio
 veC
-dfr
-tio
 kjZ
-dfr
-tio
+jAl
+foW
+kjZ
+jAl
 veC
 dfr
 nZu
@@ -32302,7 +32240,7 @@ tio
 tpx
 dfr
 tio
-foW
+mRw
 dfr
 tio
 tpx
@@ -32504,7 +32442,7 @@ tio
 bPx
 dfr
 tio
-foW
+bPx
 dfr
 kme
 hjq
@@ -32707,7 +32645,7 @@ tjq
 dfr
 tio
 qKO
-ohq
+dfr
 kme
 kme
 bwy
@@ -32908,7 +32846,7 @@ fYf
 nZu
 nZu
 fYf
-qeb
+fYf
 fYf
 nZu
 nZu
@@ -33109,9 +33047,9 @@ mLc
 cVG
 cVG
 cVG
-yck
-qSe
-yck
+cVG
+aaU
+cVG
 cVG
 cVG
 cVG
@@ -35709,11 +35647,11 @@ lJV
 fTS
 jBK
 jwK
-kwX
+erb
 dOw
 pSY
 mYC
-kcz
+clD
 jwK
 tkP
 cbY
@@ -35911,11 +35849,11 @@ rZg
 iSZ
 dId
 jwK
-kwX
+erb
 sDX
 pSY
 eRw
-kcz
+clD
 jwK
 jwK
 qXi
@@ -36113,11 +36051,11 @@ lMY
 vmu
 nHN
 jwK
-kwX
+erb
 dOw
 pSY
 mYC
-kcz
+clD
 jwK
 jwK
 xvn
@@ -38133,11 +38071,11 @@ lMY
 rCl
 rcl
 nsZ
-bjs
+pkY
 qjE
 bSB
 udP
-nqB
+wES
 nsZ
 nsZ
 qXi
@@ -38335,11 +38273,11 @@ rZg
 rzO
 rbh
 nsZ
-bjs
+pkY
 ptJ
 bSB
 sjm
-nqB
+wES
 nsZ
 nsZ
 xvn
@@ -38537,11 +38475,11 @@ fDH
 fTS
 viN
 nsZ
-bjs
+pkY
 qjE
 bSB
 udP
-nqB
+wES
 nsZ
 wBQ
 cbY
@@ -41189,9 +41127,9 @@ gIu
 qLc
 qLc
 qLc
-rFp
-xls
-rFp
+qLc
+bjs
+qLc
 qLc
 qLc
 qLc
@@ -41392,7 +41330,7 @@ ykH
 wfX
 wfX
 ykH
-vzt
+ykH
 ykH
 wfX
 wfX
@@ -41595,7 +41533,7 @@ xtm
 wLJ
 cLu
 jTt
-bUW
+wLJ
 cLu
 xtm
 wLJ
@@ -41796,7 +41734,7 @@ cLu
 gOD
 wLJ
 cLu
-pvB
+gOD
 wLJ
 cLu
 gOD
@@ -41998,7 +41936,7 @@ cLu
 qiv
 wLJ
 cLu
-pvB
+fPk
 wLJ
 cLu
 qiv
@@ -42198,11 +42136,11 @@ kQA
 wfX
 cLu
 eLa
-wLJ
-cLu
 unJ
-wLJ
-cLu
+kWx
+pvB
+unJ
+kWx
 eLa
 wLJ
 wfX
@@ -42603,7 +42541,7 @@ ykH
 cLu
 gOD
 wLJ
-aaU
+cLu
 pvB
 wLJ
 cLu

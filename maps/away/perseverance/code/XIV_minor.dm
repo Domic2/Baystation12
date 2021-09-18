@@ -399,48 +399,6 @@ obj/machinery/atmospherics/unary/outlet_injector/waste
 
 	icon_state = "speedspace_ew_[transit_state]"
 
-//let's make railings a bit better, shall we? This is badly done, by the way, problably more efficient ways to do this.
-//NOTE: DID THIS THE BETTER WAY ON OFFICIAL BAY
-/obj/structure/railing/on_update_icon(var/update_neighbors = TRUE)
-	. = ..()
-
-	if (dir == 2)
-		layer = ABOVE_HUMAN_LAYER
-	else
-		layer = OBJ_LAYER
-
-/obj/structure/railing/do_climb(var/mob/living/user)
-	. = ..()
-	if (layer == ABOVE_HUMAN_LAYER)
-		var/startlayer = user.layer
-		user.layer = VEHICLE_LOAD_LAYER
-		sleep (1.5)//just enough time
-		if(user.layer == VEHICLE_LOAD_LAYER)//Makes sure the user's layer wasn't changed in the last 1.5 miliseconds in order to avoid a layer error. Not completely necessary.
-			user.layer = startlayer
-
-/datum/event/disposals_explosion/end()//removed the trash, since the Perseverance disposal system is not for trash, mostly
-	if(isnull(bursting_pipe))
-		return
-
-	GLOB.destroyed_event.unregister(bursting_pipe, src, .proc/pipe_destroyed)
-
-	if(bursting_pipe.health < 5)
-		// Make a disposals holder for the trash
-//		var/obj/structure/disposalholder/trash_holder = new()
-
-		// Fill it with trash
-//		for(var/i = 0 to rand(5,8))
-//			var/chosen_trash = pick(subtypesof(/obj/item/trash))
-//			var/obj/item/trash/T = new chosen_trash()
-//			T.forceMove(trash_holder)
-
-		// Add the trash to the pipe
-//		trash_holder.forceMove(bursting_pipe)
-		// Burst the pipe, spewing trash all over
-		bursting_pipe.broken(1)
-		// Make a scary noise
-		playsound(bursting_pipe, get_sfx("explosion"), 40, 0, 0, 5)
-
 /obj/machinery/light/navigation//check your layers!
 	layer = MOUSETRAP_LAYER
 
@@ -448,3 +406,7 @@ obj/machinery/atmospherics/unary/outlet_injector/waste
 	var/turf/T = get_turf(loc)
 	if(T)
 		T.blocks_air = 1
+
+/obj/machinery/computer/rdconsole/xiv
+	name = "robotics fabricator console"
+	id = 4

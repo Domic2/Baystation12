@@ -3,3 +3,4 @@
 	id = access_XIV
 	desc = "Xion Industries Access"
 	region = ACCESS_REGION_GENERAL
+	access_type = ACCESS_TYPE_NONE

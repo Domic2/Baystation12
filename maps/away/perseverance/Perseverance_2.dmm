@@ -437,9 +437,9 @@
 /obj/structure/table/standard,
 /obj/item/melee/baton/cattleprod,
 /obj/machinery/cell_charger,
-/obj/item/cell,
-/obj/item/cell,
 /obj/item/cell/device/high,
+/obj/random/powercell,
+/obj/random/powercell,
 /turf/simulated/floor/tiled/dark/monotile,
 /area/space)
 "cX" = (
@@ -4525,7 +4525,7 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ship/perseverance/ventilation/blue/fore)
 "wi" = (
-/obj/machinery/atmospherics/pipe/simple/visible/fuel,
+/obj/machinery/atmospherics/pipe/simple/visible/fuel/advanced,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay/port_upper)
 "wj" = (
@@ -4664,7 +4664,7 @@
 /turf/simulated/floor/airless,
 /area/ship/perseverance/sec/top/sfore)
 "wO" = (
-/obj/machinery/atmospherics/pipe/simple/visible/fuel,
+/obj/machinery/atmospherics/pipe/simple/visible/fuel/advanced,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay/starboard_upper)
 "wP" = (
@@ -5371,6 +5371,9 @@
 "zD" = (
 /obj/structure/railing/mapped{
 	dir = 4
+	},
+/obj/machinery/computer/modular/preset/aislot/sysadmin{
+	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/bridge/comms)
@@ -6973,6 +6976,7 @@
 /obj/structure/table/standard,
 /obj/item/stack/material/rods/fifty,
 /obj/item/stack/material/rods/fifty,
+/obj/item/device/flashlight,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/workshop)
 "Ha" = (
@@ -9194,10 +9198,6 @@
 /obj/machinery/light,
 /turf/simulated/floor/reinforced,
 /area/ship/perseverance/eng/atmos_workshop)
-"Qs" = (
-/obj/effect/overmap/visitable/ship/Perseverance,
-/turf/simulated/wall/r_wall/prepainted,
-/area/ship/perseverance/bridge/navigation)
 "Qu" = (
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -9373,6 +9373,8 @@
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/item/device/flashlight/lantern,
 /obj/item/device/flashlight/lantern,
+/obj/item/device/flashlight,
+/obj/item/device/flashlight,
 /turf/simulated/floor/reinforced,
 /area/ship/perseverance/eng/workshop)
 "Rg" = (
@@ -9783,10 +9785,10 @@
 /turf/simulated/floor/reinforced,
 /area/ship/perseverance/eng/workshop)
 "SU" = (
-/obj/machinery/computer/rdconsole/robotics,
 /obj/structure/reagent_dispensers/acid{
 	pixel_y = 26
 	},
+/obj/machinery/computer/rdconsole/xiv,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/midship/robotics)
 "SW" = (
@@ -31086,7 +31088,7 @@ SJ
 SJ
 SJ
 UY
-Za
+Vx
 Wz
 Wz
 Wz
@@ -31445,7 +31447,7 @@ WX
 qP
 XF
 Rl
-Qs
+Xk
 Xk
 dj
 Xk

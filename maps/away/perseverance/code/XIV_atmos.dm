@@ -403,12 +403,10 @@ obj/machinery/air_sensor/XIV/fuel/combust/c4
 
 /obj/machinery/atmospherics/unary/engine/experimental
 	name = "experimental rocket nozzle"
-	desc = "Experimental rocket nozzle, expelling gas at hypersonic velocities to propell the ship. This one uses a number of odd design choices to provide more thrust from high pressure."
-	icon = 'icons/obj/ship_engine.dmi'
-	icon_state = "nozzle"
+	desc = "Experimental rocket nozzle, expelling gas at hypersonic velocities to propell the ship."
 
 /obj/machinery/atmospherics/unary/engine/experimental/calculate_thrust(datum/gas_mixture/propellant, used_part = 1)
-	return round(sqrt(propellant.get_mass() * used_part) + (air_contents.return_pressure() / 50000),0.1)
+	return round(sqrt(propellant.get_mass() * used_part) + (air_contents.return_pressure() / 10000),0.1)
 
 /obj/item/stock_parts/circuitboard/unary_atmos/engine/experimental
 	name = T_BOARD("experimental gas thruster")

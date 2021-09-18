@@ -19,7 +19,7 @@
 	density = 1
 
 /datum/shuttle/autodock/ferry/xiv/central_lift
-	name = "Central Lift" //!!
+	name = "Perseverance Central Lift"
 	shuttle_area = /area/ship/perseverance/lift //!!
 	waypoint_station = "nav_xiv_cargo_lift_bottom"
 	waypoint_offsite = "nav_xiv_cargo_lift_top"
