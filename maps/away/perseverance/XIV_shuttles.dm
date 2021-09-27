@@ -11,7 +11,7 @@
 	warmup_time = 15
 	fuel_consumption = 3
 	logging_home_tag = "nav_dock_mining"
-	logging_access = access_XIV
+	logging_access = access_xiv
 	ceiling_type = /turf/simulated/floor/shuttle_ceiling
 	flags = SHUTTLE_FLAGS_PROCESS
 	defer_initialisation = TRUE
@@ -19,7 +19,7 @@
 /obj/machinery/computer/shuttle_control/explore/chimera
 	name = "shuttle control console"
 	shuttle_tag = "Chimera"
-	req_access = list(access_XIV)
+	req_access = list(access_xiv)
 
 /obj/effect/shuttle_landmark/perseverance/dock/mining
 	name = "Chimera Dock"
@@ -43,7 +43,7 @@
 	warmup_time = 10
 	fuel_consumption =2
 	logging_home_tag = "nav_dock_cargo"
-	logging_access = access_XIV
+	logging_access = access_xiv
 	ceiling_type = /turf/simulated/floor/shuttle_ceiling
 	flags = SHUTTLE_FLAGS_PROCESS
 	defer_initialisation = TRUE
@@ -51,7 +51,7 @@
 /obj/machinery/computer/shuttle_control/explore/cargo
 	name = "shuttle control console"
 	shuttle_tag = "Marshal"
-	req_access = list(access_XIV)
+	req_access = list(access_xiv)
 
 /obj/effect/shuttle_landmark/perseverance/dock/cargo
 	name = "Marshal Dock"
@@ -74,7 +74,7 @@
 	range = 0
 	warmup_time = 5
 	logging_home_tag = "nav_dock_scout"
-	logging_access = access_XIV
+	logging_access = access_xiv
 	ceiling_type = /turf/simulated/floor/shuttle_ceiling/dark
 	flags = SHUTTLE_FLAGS_PROCESS
 	defer_initialisation = TRUE
@@ -106,7 +106,7 @@
 	warmup_time = 10
 	fuel_consumption =2
 	logging_home_tag = "nav_dock_science"
-	logging_access = access_XIV
+	logging_access = access_xiv
 	ceiling_type = /turf/simulated/floor/shuttle_ceiling
 	flags = SHUTTLE_FLAGS_PROCESS
 	defer_initialisation = TRUE
@@ -114,7 +114,7 @@
 /obj/machinery/computer/shuttle_control/explore/science
 	name = "shuttle control console"
 	shuttle_tag = "Phobos"
-	req_access = list(access_XIV)
+	req_access = list(access_xiv)
 
 /obj/effect/shuttle_landmark/perseverance/dock/science
 	name = "Phobos Dock"

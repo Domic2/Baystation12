@@ -43,18 +43,18 @@
 /area/ship/perseverance/midship/infirmary
 	name = "\improper Perseverance Infirmary"
 	icon_state = "medbay"
-	req_access = list(access_XIV)
+	req_access = list(access_xiv)
 
 /area/ship/perseverance/midship/chemistry
 	name = "\improper Perseverance Chemistry"
 	icon_state = "chem"
-	req_access = list(access_XIV, access_medical)
+	req_access = list(access_xiv, access_medical)
 	sound_env = SMALL_ENCLOSED
 
 /area/ship/perseverance/midship/robotics
 	name = "\improper Perseverance Robotics Workshop"
 	icon_state = "robotics"
-	req_access = list(access_XIV, access_robotics)
+	req_access = list(access_xiv, access_robotics)
 	sound_env = SMALL_ENCLOSED
 
 /area/ship/perseverance/midship/bathroom
@@ -73,7 +73,7 @@
 	name = "\improper Perseverance Xenoflora Lab"
 	icon_state = "xeno_lab"
 	sound_env = SMALL_ENCLOSED
-	req_access = list(access_XIV, access_research)
+	req_access = list(access_xiv, access_research)
 
 //cargo bay
 
@@ -96,67 +96,67 @@
 	name = "\improper Perseverance Cargo Bay Administration"
 	icon_state = "crew_quarters"
 	sound_env = SMALL_ENCLOSED
-	req_access = list(access_XIV)
+	req_access = list(access_xiv)
 
 //engineering
 
 /area/ship/perseverance/eng/reactor
 	name = "\improper Perseverance Engineering"
 	icon_state = "engine"
-	req_access = list(access_XIV, access_engine)
+	req_access = list(access_xiv, access_engine)
 	sound_env = LARGE_ENCLOSED
 
 /area/ship/perseverance/eng/atmos_out
 	name = "\improper Perseverance Atmospherics Distribution"
 	icon_state = "atmos"
-	req_access = list(access_XIV, access_atmospherics)
+	req_access = list(access_xiv, access_atmospherics)
 	sound_env = SMALL_ENCLOSED
 
 /area/ship/perseverance/eng/atmos_injection
 	name = "\improper Perseverance Atmospherics Air Injection"
 	icon_state = "atmos"
-	req_access = list(access_XIV, access_atmospherics)
+	req_access = list(access_xiv, access_atmospherics)
 
 /area/ship/perseverance/eng/atmos_in
 	name = "\improper Perseverance Atmospherics Filtering"
 	icon_state = "atmos"
-	req_access = list(access_XIV, access_atmospherics)
+	req_access = list(access_xiv, access_atmospherics)
 	sound_env = LARGE_ENCLOSED
 
 /area/ship/perseverance/eng/atmos_mixing
 	name = "\improper Perseverance Atmospherics Mixing"
 	icon_state = "atmos"
-	req_access = list(access_XIV, access_atmospherics)
+	req_access = list(access_xiv, access_atmospherics)
 
 /area/ship/perseverance/eng/workshop
 	name = "\improper Perseverance Engineering Workshop"
 	icon_state = "engineering"
-	req_access = list(access_XIV, access_engine)
+	req_access = list(access_xiv, access_engine)
 
 /area/ship/perseverance/eng/workshopstore
 	name = "\improper Perseverance Engineering Workshop Storage"
 	icon_state = "engine"
-	req_access = list(access_XIV, access_engine)
+	req_access = list(access_xiv, access_engine)
 
 /area/ship/perseverance/eng/atmos_workshop
 	name = "\improper Perseverance Atmospherics Workshop"
 	icon_state = "atmos"
-	req_access = list(access_XIV, access_atmospherics)
+	req_access = list(access_xiv, access_atmospherics)
 
 /area/ship/perseverance/eng/atmosstore
 	name = "\improper Perseverance Engineering Workshop Storage"
 	icon_state = "atmos"
-	req_access = list(access_XIV, access_atmospherics)
+	req_access = list(access_xiv, access_atmospherics)
 
 /area/ship/perseverance/eng/defunct
 	name = "\improper Perseverance Defunct Aux Reactor"
 	icon_state = "engine"
-	req_access = list(access_XIV, access_atmospherics)
+	req_access = list(access_xiv, access_atmospherics)
 
 /area/ship/perseverance/eng/fuelbay
 	name = "\improper Perseverance Central Fuel Bay"
 	icon_state = "engine"
-	req_access = list(access_XIV, access_atmospherics, access_engine)
+	req_access = list(access_xiv, access_atmospherics, access_engine)
 	has_gravity = FALSE
 
 /area/ship/perseverance/eng/fuelbay/port
@@ -170,12 +170,12 @@
 /area/ship/perseverance/eng/fuelbay_monitoring
 	name = "\improper Perseverance Fuel Bay Monitoring"
 	icon_state = "atmos"
-	req_access = list(access_XIV, access_atmospherics)
+	req_access = list(access_xiv, access_atmospherics)
 
 /area/ship/perseverance/eng/fuelbay_monitoring_upper
 	name = "\improper Perseverance Upper fuel Bay Monitoring"
 	icon_state = "atmos"
-	req_access = list(access_XIV, access_atmospherics)
+	req_access = list(access_xiv, access_atmospherics)
 
 /area/ship/perseverance/eng/fuelbay/upper
 	name = "\improper Perseverance Upper Central Fuel Bay"
@@ -240,62 +240,62 @@
 /area/ship/perseverance/bridge/navigation
 	name = "\improper Perseverance Navigation Center"
 	icon_state = "shuttle"
-	req_access = list(access_XIV, access_bridge)
+	req_access = list(access_xiv, access_bridge)
 	sound_env = SMALL_ENCLOSED
 
 /area/ship/perseverance/bridge/fhallway
 	name = "\improper Perseverance Bridge Fore Hallway"
 	icon_state = "hallF"
-	req_access = list(access_XIV, access_bridge)
+	req_access = list(access_xiv, access_bridge)
 	sound_env = SMALL_ENCLOSED
 
 /area/ship/perseverance/bridge/ahallway
 	name = "\improper Perseverance Bridge Aft Hallway"
 	icon_state = "hallA"
-	req_access = list(access_XIV)
+	req_access = list(access_xiv)
 	sound_env = SMALL_ENCLOSED
 
 /area/ship/perseverance/bridge/storage
 	name = "\improper Perseverance Bridge Storage"
 	icon_state = "quartstorage"
-	req_access = list(access_XIV, access_bridge)
+	req_access = list(access_xiv, access_bridge)
 	sound_env = SMALL_ENCLOSED
 
 /area/ship/perseverance/bridge/comms
 	name = "\improper Perseverance Communications"
 	icon_state = "tcomsatcham"
-	req_access = list(access_XIV, access_network)
+	req_access = list(access_xiv, access_network)
 	sound_env = SMALL_ENCLOSED
 
 /area/ship/perseverance/bridge/study
 	name = "\improper Perseverance Expedition Leader's Study"
 	icon_state = "head_quarters"
-	req_access = list(access_XIV, access_captain)
+	req_access = list(access_xiv, access_captain)
 	sound_env = SMALL_ENCLOSED
 
 /area/ship/perseverance/bridge/aisat
 	name = "\improper Perseverance AI Chamber"
 	icon_state = "ai_foyer"
-	req_access = list(access_XIV, access_engine, access_bridge)
+	req_access = list(access_xiv, access_engine, access_bridge)
 	sound_env = SMALL_ENCLOSED
 
 /area/ship/perseverance/bridge/aicore
 	name = "\improper Perseverance AI Core"
 	icon_state = "ai_chamber"
-	req_access = list(access_XIV, access_engine, access_bridge)
+	req_access = list(access_xiv, access_engine, access_bridge)
 	sound_env = SMALL_ENCLOSED
 
 /area/ship/perseverance/bridge/selfdestruct
 	name = "\improper Perseverance Self Destruct System"
 	icon_state = "nuke_storage"
-	req_access = list(access_XIV, access_bridge)
+	req_access = list(access_xiv, access_bridge)
 	area_flags = AREA_FLAG_IS_NOT_PERSISTENT
 
 area/ship/perseverance/bridge/bluespacedrive
 	name = "\improper Perseverance Bluespace Drive"
 	icon_state = "engineering"
 	color = COLOR_BLUE_LIGHT
-	req_access = list(access_XIV, access_engine)
+	req_access = list(access_xiv, access_engine)
 
 /area/ship/perseverance/hall/bsport
 	name = "\improper Perseverance Port Bluespace Drive Access"
@@ -304,6 +304,32 @@ area/ship/perseverance/bridge/bluespacedrive
 /area/ship/perseverance/hall/bsstarboard
 	name = "\improper Perseverance Starboard Bluespace Dive Access"
 	icon_state = "hallA"
+
+//science
+
+/area/ship/perseverance/sci
+	req_access = list(access_xiv, access_research)
+
+/area/ship/perseverance/sci/fabrication
+	name = "\improper Perseverance Fabrication Area"
+	icon_state = "devlab"
+	sound_env = SMALL_ENCLOSED
+
+/area/ship/perseverance/sci/hallway
+	name = "\improper Perseverance Research Hallway"
+	icon_state = "decontamination"
+
+/area/ship/perseverance/sci/anomaly
+	name = "\improper Perseverance Anomaly Analysis"
+	icon_state = "xeno_lab"
+
+/area/ship/perseverance/sci/general
+	name = "\improper Perseverance General Laboratory"
+	icon_state = "devlab"
+
+/area/ship/perseverance/sci/observation
+	name = "\improper Perseverance Observation Chamber"
+	icon_state = "xeno_lab"
 
 //S.E.C.
 

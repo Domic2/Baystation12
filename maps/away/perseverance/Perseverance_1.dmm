@@ -73,7 +73,9 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/sec/bot/pmid)
 "afF" = (
-/obj/machinery/air_sensor/XIV/fuel/combust/c2,
+/obj/machinery/air_sensor{
+	id_tag = "C_2_sensor"
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay/port)
 "afR" = (
@@ -89,7 +91,10 @@
 /turf/space,
 /area/ship/perseverance/eng/fuelbay)
 "agh" = (
-/obj/machinery/atmospherics/unary/outlet_injector/XIV/fuel/O2_2,
+/obj/machinery/atmospherics/unary/outlet_injector/preset{
+	id = "O2_2_in";
+	use_power = 0
+	},
 /turf/simulated/floor/reinforced/oxygen,
 /area/ship/perseverance/eng/fuelbay/starboard)
 "agk" = (
@@ -124,7 +129,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_in)
 "ahd" = (
-/obj/machinery/computer/air_control/XIV/ventilation{
+/obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 1;
 	name = "Thrust Chamber Two Intake Control";
 	output_tag = "C_2_in";
@@ -416,7 +421,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/hall/shuthall/aport)
 "aBG" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/XIV/fuel/combust{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/xiv/combust{
 	dir = 1;
 	id_tag = "C_6_in"
 	},
@@ -530,8 +535,13 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
 	},
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller/XIV/paft{
-	pixel_y = 24
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller/xiv{
+	id_tag = "Perseverance_PAft_Airlock";
+	pixel_y = 24;
+	tag_airpump = "Perseverance_PAft_Pump";
+	tag_chamber_sensor = "Perseverance_PAft_Sensor";
+	tag_exterior_door = "Perseverance_PAft_Out";
+	tag_interior_door = "Perseverance_PAft_In"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -831,7 +841,8 @@
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/fore/miningprep)
 "bdL" = (
-/obj/machinery/access_button/airlock_exterior/XIV/paft{
+/obj/machinery/access_button/airlock_exterior/xiv{
+	master_tag = "Perseverance_PAft_Airlock";
 	pixel_x = -24;
 	pixel_y = -24
 	},
@@ -1234,7 +1245,10 @@
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay/starboard)
 "bFr" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/XIV/fuel/CO2_1,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/xiv{
+	id_tag = "CO2_1_out";
+	use_power = 0
+	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
 /area/ship/perseverance/eng/fuelbay/port)
 "bFB" = (
@@ -1276,7 +1290,9 @@
 /turf/simulated/floor/airless,
 /area/ship/perseverance/eng/fuelbay)
 "bKe" = (
-/obj/machinery/door/airlock/external/bolted/XIV/saft/internal,
+/obj/machinery/door/airlock/external/bolted/xiv{
+	id_tag = "Perseverance_SAft_In"
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/ship/perseverance/hall/ehall/starboard)
 "bKr" = (
@@ -1327,7 +1343,8 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/hall/ehall)
 "bNa" = (
-/obj/machinery/access_button/airlock_exterior/XIV/sfore{
+/obj/machinery/access_button/airlock_exterior/xiv{
+	master_tag = "Perseverance_SFore_Airlock";
 	pixel_x = -24;
 	pixel_y = 24
 	},
@@ -1359,7 +1376,9 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ship/perseverance/sec/bot/pstore)
 "bQi" = (
-/obj/machinery/door/airlock/external/bolted/XIV/smid/external,
+/obj/machinery/door/airlock/external/bolted/xiv{
+	id_tag = "Perseverance_SMid_Out"
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/ship/perseverance/sec/bot/saft)
 "bRR" = (
@@ -1399,7 +1418,7 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "marshal_shuttle_outer";
 	name = "Marshal Docking Hatch"
@@ -1540,7 +1559,10 @@
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/midship/storage)
 "chM" = (
-/obj/machinery/atmospherics/unary/outlet_injector/XIV/fuel/O2_1,
+/obj/machinery/atmospherics/unary/outlet_injector/preset{
+	id = "O2_1_in";
+	use_power = 0
+	},
 /turf/simulated/floor/reinforced/oxygen,
 /area/ship/perseverance/eng/fuelbay/port)
 "ciT" = (
@@ -1842,7 +1864,8 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/perseverance/science)
 "cHg" = (
-/obj/machinery/access_button/airlock_exterior/XIV/pfore{
+/obj/machinery/access_button/airlock_exterior/xiv{
+	master_tag = "Perseverance_PFore_Airlock";
 	pixel_x = 24;
 	pixel_y = 24
 	},
@@ -1906,14 +1929,16 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/sec/bot/sfore)
 "cKB" = (
-/obj/machinery/door/airlock/external/bolted/XIV/paft/external,
+/obj/machinery/door/airlock/external/bolted/xiv{
+	id_tag = "Perseverance_PAft_Out"
+	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/ship/perseverance/hall/ehall/port)
 "cLu" = (
-/obj/machinery/atmospherics/unary/vent_pump/tank/XIV/ventilation/outlet,
+/obj/machinery/atmospherics/unary/vent_pump/tank/xiv/ventilation/outlet,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_in)
 "cLH" = (
@@ -1943,10 +1968,12 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/hall/ehall/port)
 "cNy" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock/XIV/sfore{
-	dir = 1
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	dir = 1;
+	id_tag = "Perseverance_SFore_Pump"
 	},
-/obj/machinery/airlock_sensor/XIV/sfore{
+/obj/machinery/airlock_sensor/xiv{
+	id_tag = "Perseverance_SFore_Sensor";
 	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -1978,7 +2005,7 @@
 /obj/machinery/air_sensor{
 	id_tag = "Phobos_Capture_Sensor"
 	},
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/XIV{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/xiv{
 	dir = 1;
 	id_tag = "Phobos_Capture_Vent";
 	use_power = 0
@@ -2022,8 +2049,10 @@
 /turf/simulated/wall/titanium,
 /area/shuttle/perseverance/science)
 "cTz" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/XIV/fuel/H2_2{
-	dir = 1
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/xiv{
+	dir = 1;
+	id_tag = "H2_2_out";
+	use_power = 0
 	},
 /turf/simulated/floor/reinforced/hydrogen,
 /area/ship/perseverance/eng/fuelbay/starboard)
@@ -2075,7 +2104,7 @@
 	icon_state = "2-8"
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "marshal_shuttle_dock_door";
 	name = "Perseverance Docking Hatch"
@@ -2134,7 +2163,7 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "marshal_shuttle_dock_door";
 	name = "Perseverance Docking Hatch"
@@ -2200,7 +2229,7 @@
 /turf/simulated/floor/tiled/white,
 /area/shuttle/perseverance/science)
 "dfr" = (
-/obj/machinery/atmospherics/unary/vent_pump/tank/XIV/ventilation/inlet{
+/obj/machinery/atmospherics/unary/vent_pump/tank/xiv/ventilation/inlet{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
@@ -2212,8 +2241,13 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
 	},
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller/XIV/saft{
-	pixel_y = 24
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller/xiv{
+	id_tag = "Perseverance_SAft_Airlock";
+	pixel_y = 24;
+	tag_airpump = "Perseverance_SAft_Pump";
+	tag_chamber_sensor = "Perseverance_SAft_Sensor";
+	tag_exterior_door = "Perseverance_SAft_Out";
+	tag_interior_door = "Perseverance_SAft_In"
 	},
 /obj/structure/cable{
 	icon_state = "4-8"
@@ -2349,7 +2383,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/reactor)
 "dsq" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/XIV/fuel/combust{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/xiv/combust{
 	dir = 1;
 	id_tag = "C_7_in"
 	},
@@ -2365,7 +2399,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/reactor)
 "dtd" = (
-/obj/machinery/computer/air_control/XIV/ventilation{
+/obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 1;
 	name = "Ventilation Outlet System Control Console";
 	output_tag = "ventilation_out";
@@ -2399,7 +2433,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/sec/bot/pmid)
 "dvI" = (
-/obj/machinery/atmospherics/pipe/simple/visible/fuel/advanced,
+/obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay/starboard)
 "dws" = (
@@ -2554,7 +2588,7 @@
 	icon_state = "1-4"
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "marshal_shuttle_dock_door";
 	name = "Perseverance Docking Hatch"
@@ -2985,7 +3019,10 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/ship/perseverance/midship/cryop)
 "etn" = (
-/obj/machinery/atmospherics/unary/outlet_injector/XIV/fuel/H2_1,
+/obj/machinery/atmospherics/unary/outlet_injector/preset{
+	id = "H2_1_in";
+	use_power = 0
+	},
 /turf/simulated/floor/reinforced/hydrogen,
 /area/ship/perseverance/eng/fuelbay/port)
 "etD" = (
@@ -3266,7 +3303,9 @@
 /turf/simulated/floor/tiled,
 /area/shuttle/perseverance/mining)
 "eMs" = (
-/obj/machinery/air_sensor/XIV/fuel/CO2_2,
+/obj/machinery/air_sensor{
+	id_tag = "CO2_2_sensor"
+	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
 /area/ship/perseverance/eng/fuelbay/starboard)
 "eMG" = (
@@ -3403,7 +3442,7 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ship/perseverance/midship/storage)
 "eSb" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/XIV/fuel{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/xiv{
 	id_tag = "Dagger_Mix_Out"
 	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
@@ -3493,7 +3532,9 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/reactor)
 "fcU" = (
-/obj/machinery/air_sensor/XIV/fuel/O2_1,
+/obj/machinery/air_sensor{
+	id_tag = "O2_1_sensor"
+	},
 /turf/simulated/floor/reinforced/oxygen,
 /area/ship/perseverance/eng/fuelbay/port)
 "fdI" = (
@@ -3654,7 +3695,8 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/midship/storage)
 "flo" = (
-/obj/machinery/access_button/airlock_exterior/XIV/saft{
+/obj/machinery/access_button/airlock_exterior/xiv{
+	master_tag = "Perseverance_SAft_Airlock";
 	pixel_x = 24;
 	pixel_y = -24
 	},
@@ -3791,7 +3833,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/fuelbay_monitoring)
 "fwk" = (
-/obj/machinery/computer/air_control/XIV/ventilation{
+/obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 1;
 	name = "Ventilation Inlet System Control Console";
 	output_tag = "ventilation_in";
@@ -3897,7 +3939,9 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ship/perseverance/eng/reactor)
 "fCd" = (
-/obj/machinery/door/airlock/external/bolted/XIV/saft/external,
+/obj/machinery/door/airlock/external/bolted/xiv{
+	id_tag = "Perseverance_SAft_Out"
+	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -4066,7 +4110,9 @@
 /area/ship/perseverance/sec/bot/pmid)
 "fPk" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/red,
-/obj/machinery/air_sensor/XIV/ventilation_outlet,
+/obj/machinery/air_sensor{
+	id_tag = "VO_Sensor"
+	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_in)
 "fPt" = (
@@ -4425,7 +4471,9 @@
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/hall/shuthall/astarboard)
 "gnH" = (
-/obj/machinery/door/airlock/external/bolted/XIV/sfore/external,
+/obj/machinery/door/airlock/external/bolted/xiv{
+	id_tag = "Perseverance_SFore_Out"
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/ship/perseverance/sec/bot/smid)
 "goq" = (
@@ -4569,7 +4617,7 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "phobos_shuttle_dock_door";
 	name = "Perseverance Docking Hatch"
@@ -4667,7 +4715,8 @@
 /turf/space,
 /area/space)
 "gCm" = (
-/obj/machinery/access_button/airlock_exterior/XIV/pmid{
+/obj/machinery/access_button/airlock_exterior/xiv{
+	master_tag = "Perseverance_PMid_Airlock";
 	pixel_x = -24;
 	pixel_y = -24
 	},
@@ -4732,8 +4781,10 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_in)
 "gGD" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/XIV/fuel/O2_2{
-	dir = 1
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/xiv{
+	dir = 1;
+	id_tag = "O2_2_out";
+	use_power = 0
 	},
 /turf/simulated/floor/reinforced/oxygen,
 /area/ship/perseverance/eng/fuelbay/starboard)
@@ -4994,7 +5045,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/reactor)
 "gXR" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/XIV/fuel/combust{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/xiv/combust{
 	dir = 1;
 	id_tag = "C_3_in"
 	},
@@ -5067,7 +5118,7 @@
 	id_tag = "C_8_igniter";
 	pixel_x = -24
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/fuel/advanced,
+/obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay/starboard)
 "hdT" = (
@@ -5118,7 +5169,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/cargobay/aft)
 "hit" = (
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "phobos_shuttle_outer";
 	name = "Phobos Docking Hatch"
@@ -5382,7 +5433,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_out)
 "hGw" = (
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "phobos_shuttle_outer";
 	name = "Phobos Docking Hatch"
@@ -5602,7 +5653,7 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "marshal_shuttle_outer";
 	name = "Marshal Docking Hatch"
@@ -5636,7 +5687,9 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/hall/phall)
 "hXu" = (
-/obj/machinery/air_sensor/XIV/fuel/H2_1,
+/obj/machinery/air_sensor{
+	id_tag = "H2_1_sensor"
+	},
 /turf/simulated/floor/reinforced/hydrogen,
 /area/ship/perseverance/eng/fuelbay/starboard)
 "hYb" = (
@@ -5660,7 +5713,10 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/sec/bot/paft)
 "hZI" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/XIV/fuel/CO2_2,
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/xiv{
+	id_tag = "CO2_2_out";
+	use_power = 0
+	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
 /area/ship/perseverance/eng/fuelbay/starboard)
 "hZL" = (
@@ -5723,7 +5779,7 @@
 	id_tag = "C_7_igniter";
 	pixel_x = -24
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/fuel/advanced,
+/obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay/starboard)
 "ieY" = (
@@ -5757,7 +5813,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
 	},
-/obj/machinery/access_button/airlock_interior/XIV/pmid{
+/obj/machinery/access_button/airlock_interior/xiv{
+	master_tag = "Perseverance_PMid_Airlock";
 	pixel_x = -24;
 	pixel_y = 24
 	},
@@ -5900,7 +5957,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 8
 	},
-/obj/machinery/door/airlock/external/bolted/XIV/paft/internal,
+/obj/machinery/door/airlock/external/bolted/xiv{
+	id_tag = "Perseverance_PAft_In"
+	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -5953,7 +6012,7 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "marshal_shuttle_outer";
 	name = "Marshal Docking Hatch"
@@ -6027,7 +6086,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/fore/gantry)
 "iwD" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/XIV/fuel/combust{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/xiv/combust{
 	dir = 1;
 	id_tag = "C_8_in"
 	},
@@ -6126,7 +6185,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/hall/ehall/starboard)
 "iIT" = (
-/obj/machinery/atmospherics/unary/outlet_injector/XIV/fuel{
+/obj/machinery/atmospherics/unary/outlet_injector/xiv/fuel{
 	dir = 1;
 	id_tag = "Dagger_Mix_In"
 	},
@@ -6236,7 +6295,7 @@
 /obj/structure/cable{
 	icon_state = "2-8"
 	},
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "dagger_shuttle_dock_door";
 	name = "Perseverance Docking Hatch"
@@ -6630,7 +6689,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "marshal_shuttle_dock_door";
 	name = "Perseverance Docking Hatch"
@@ -6739,7 +6798,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/reactor)
 "jAl" = (
-/obj/machinery/atmospherics/unary/vent_pump/tank/XIV/ventilation/inlet,
+/obj/machinery/atmospherics/unary/vent_pump/tank/xiv/ventilation/inlet,
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_out)
@@ -6813,7 +6872,9 @@
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/fore/gantry)
 "jHP" = (
-/obj/machinery/air_sensor/XIV/fuel/H2_1,
+/obj/machinery/air_sensor{
+	id_tag = "H2_1_sensor"
+	},
 /turf/simulated/floor/reinforced/hydrogen,
 /area/ship/perseverance/eng/fuelbay/port)
 "jHR" = (
@@ -6972,7 +7033,9 @@
 /area/ship/perseverance/midship/bathroom)
 "jSw" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/machinery/door/airlock/external/bolted/XIV/smid/internal,
+/obj/machinery/door/airlock/external/bolted/xiv{
+	id_tag = "Perseverance_SMid_In"
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/ship/perseverance/sec/bot/saft)
 "jSX" = (
@@ -7057,7 +7120,7 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "phobos_shuttle_dock_door";
 	name = "Perseverance Docking Hatch"
@@ -7160,7 +7223,7 @@
 	icon_state = "1-2"
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "marshal_shuttle_dock_door";
 	name = "Perseverance Docking Hatch"
@@ -7215,7 +7278,10 @@
 /turf/simulated/floor/airless,
 /area/ship/perseverance/eng/fuelbay/starboard)
 "khj" = (
-/obj/machinery/atmospherics/unary/outlet_injector/XIV/fuel/H2_2,
+/obj/machinery/atmospherics/unary/outlet_injector/preset{
+	id = "H2_2_in";
+	use_power = 0
+	},
 /turf/simulated/floor/reinforced/hydrogen,
 /area/ship/perseverance/eng/fuelbay/starboard)
 "khG" = (
@@ -7252,7 +7318,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/cargobay/aft)
 "kjZ" = (
-/obj/machinery/atmospherics/unary/vent_pump/tank/XIV/ventilation/inlet{
+/obj/machinery/atmospherics/unary/vent_pump/tank/xiv/ventilation/inlet{
 	dir = 1
 	},
 /obj/effect/catwalk_plated,
@@ -7731,7 +7797,9 @@
 /turf/simulated/floor/airless,
 /area/ship/perseverance/eng/fuelbay/starboard)
 "kQu" = (
-/obj/machinery/air_sensor/XIV/fuel/combust/c3,
+/obj/machinery/air_sensor{
+	id_tag = "C_3_sensor"
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay)
 "kQA" = (
@@ -7742,7 +7810,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_in)
 "kRm" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/XIV{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/xiv{
 	dir = 4;
 	id_tag = "AGBC_out"
 	},
@@ -7819,7 +7887,7 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/shuttle/perseverance/cargo)
 "kWx" = (
-/obj/machinery/atmospherics/unary/vent_pump/tank/XIV/ventilation/outlet,
+/obj/machinery/atmospherics/unary/vent_pump/tank/xiv/ventilation/outlet,
 /obj/effect/catwalk_plated,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_in)
@@ -7876,7 +7944,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "chimera_shuttle_outer";
 	name = "Chimera Docking Hatch"
@@ -7899,9 +7967,10 @@
 /turf/simulated/floor/wood,
 /area/ship/perseverance/fore/gantry)
 "lcJ" = (
-/obj/machinery/atmospherics/unary/vent_pump/tank/XIV/airtank1{
+/obj/machinery/atmospherics/unary/vent_pump/tank/xiv{
 	dir = 4;
-	icon_state = "map_vent_in"
+	id_tag = "airtank1_out";
+	use_power = 0
 	},
 /turf/simulated/floor/reinforced/airmix/XIV,
 /area/ship/perseverance/eng/atmos_out)
@@ -7939,12 +8008,18 @@
 /turf/simulated/floor/wood,
 /area/ship/perseverance/fore/gantry)
 "len" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock/XIV/pfore{
-	dir = 1
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	dir = 1;
+	id_tag = "Perseverance_PFore_Pump"
 	},
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller/XIV/pfore{
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller/xiv{
 	dir = 8;
-	pixel_x = 22
+	id_tag = "Perseverance_PFore_Airlock";
+	pixel_x = 22;
+	tag_airpump = "Perseverance_PFore_Pump";
+	tag_chamber_sensor = "Perseverance_PFore_Sensor";
+	tag_exterior_door = "Perseverance_PFore_Out";
+	tag_interior_door = "Perseverance_PFore_In"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/ship/perseverance/sec/bot/pmid)
@@ -7987,7 +8062,9 @@
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/reactor)
 "lha" = (
-/obj/machinery/door/airlock/external/bolted/XIV/sfore/internal,
+/obj/machinery/door/airlock/external/bolted/xiv{
+	id_tag = "Perseverance_SFore_In"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/ship/perseverance/sec/bot/smid)
@@ -8108,7 +8185,9 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 8
 	},
-/obj/machinery/door/airlock/external/bolted/XIV/saft/internal,
+/obj/machinery/door/airlock/external/bolted/xiv{
+	id_tag = "Perseverance_SAft_In"
+	},
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
@@ -8589,7 +8668,7 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "phobos_shuttle_dock_door";
 	name = "Perseverance Docking Hatch"
@@ -8605,7 +8684,7 @@
 /obj/structure/cable{
 	icon_state = "1-4"
 	},
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "chimera_shuttle_dock_door";
 	name = "Perseverance Docking Hatch"
@@ -8626,14 +8705,17 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/ship/perseverance/midship/infirmary)
 "mep" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock/XIV/smid,
-/obj/machinery/airlock_sensor/XIV/smid{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "Perseverance_SMid_Pump"
+	},
+/obj/machinery/airlock_sensor/xiv{
+	id_tag = "Perseverance_SMid_Sensor";
 	pixel_x = 24
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/ship/perseverance/sec/bot/saft)
 "mgs" = (
-/obj/machinery/computer/air_control/XIV/ventilation{
+/obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 4;
 	name = "Thrust Chamber One Intake Control";
 	output_tag = "C_1_in";
@@ -8764,7 +8846,7 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "chimera_shuttle_dock_door";
 	name = "Perseverance Docking Hatch"
@@ -9074,7 +9156,9 @@
 /area/ship/perseverance/midship/storage)
 "mRw" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/cyan,
-/obj/machinery/air_sensor/XIV/ventilation_inlet,
+/obj/machinery/air_sensor{
+	id_tag = "VI_Sensor"
+	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_out)
 "mRV" = (
@@ -9123,12 +9207,18 @@
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/fore/gantry)
 "mVO" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock/XIV/sfore{
-	dir = 1
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	dir = 1;
+	id_tag = "Perseverance_SFore_Pump"
 	},
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller/XIV/sfore{
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller/xiv{
 	dir = 4;
-	pixel_x = -22
+	id_tag = "Perseverance_SFore_Airlock";
+	pixel_x = -22;
+	tag_airpump = "Perseverance_SFore_Pump";
+	tag_chamber_sensor = "Perseverance_SFore_Sensor";
+	tag_exterior_door = "Perseverance_SFore_Out";
+	tag_interior_door = "Perseverance_SFore_In"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/ship/perseverance/sec/bot/smid)
@@ -9485,7 +9575,9 @@
 /turf/simulated/floor/airless,
 /area/ship/perseverance/eng/fuelbay)
 "nxR" = (
-/obj/machinery/air_sensor/XIV/fuel/combust/c4,
+/obj/machinery/air_sensor{
+	id_tag = "C_4_sensor"
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay)
 "nyx" = (
@@ -9499,7 +9591,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "dagger_shuttle_dock_door";
 	name = "Perseverance Docking Hatch"
@@ -9883,7 +9975,9 @@
 /area/ship/perseverance/eng/reactor)
 "ocE" = (
 /obj/machinery/atmospherics/pipe/simple/hidden,
-/obj/machinery/door/airlock/external/bolted/XIV/pmid/internal,
+/obj/machinery/door/airlock/external/bolted/xiv{
+	id_tag = "Perseverance_PMid_In"
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/ship/perseverance/sec/bot/paft)
 "ocY" = (
@@ -9946,7 +10040,8 @@
 /obj/machinery/atmospherics/pipe/manifold/hidden{
 	dir = 1
 	},
-/obj/machinery/access_button/airlock_interior/XIV/sfore{
+/obj/machinery/access_button/airlock_interior/xiv{
+	master_tag = "Perseverance_SFore_Airlock";
 	pixel_x = -24;
 	pixel_y = -24
 	},
@@ -10063,7 +10158,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "phobos_shuttle_dock_door";
 	name = "Perseverance Docking Hatch"
@@ -10130,10 +10225,17 @@
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/hall/chall)
 "oxf" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock/XIV/smid,
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller/XIV/smid{
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller/xiv{
 	dir = 4;
-	pixel_x = -22
+	id_tag = "Perseverance_SMid_Airlock";
+	pixel_x = -22;
+	tag_airpump = "Perseverance_SMid_Pump";
+	tag_chamber_sensor = "Perseverance_SMid_Sensor";
+	tag_exterior_door = "Perseverance_SMid_Out";
+	tag_interior_door = "Perseverance_SMid_In"
+	},
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "Perseverance_SMid_Pump"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/ship/perseverance/sec/bot/saft)
@@ -10148,7 +10250,10 @@
 /turf/simulated/floor/airless,
 /area/ship/perseverance/eng/fuelbay)
 "oyP" = (
-/obj/machinery/atmospherics/unary/outlet_injector/XIV/fuel/CO2_1,
+/obj/machinery/atmospherics/unary/outlet_injector/preset{
+	id = "CO2_1_in";
+	use_power = 0
+	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
 /area/ship/perseverance/eng/fuelbay/port)
 "ozC" = (
@@ -10201,7 +10306,7 @@
 /turf/simulated/floor/airless,
 /area/ship/perseverance/eng/fuelbay/port)
 "oBS" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/XIV/fuel/combust{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/xiv/combust{
 	dir = 1;
 	id_tag = "C_1_in"
 	},
@@ -10353,7 +10458,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "chimera_shuttle_dock_door";
 	name = "Perseverance Docking Hatch"
@@ -10362,7 +10467,7 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/ship/perseverance/fore/miningprep)
 "oLM" = (
-/obj/machinery/computer/air_control/XIV/ventilation{
+/obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 1;
 	name = "Thrust Chamber Seven Intake Control";
 	output_tag = "C_7_in";
@@ -10396,7 +10501,7 @@
 	id_tag = "C_2_igniter";
 	pixel_x = -24
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/fuel/advanced,
+/obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay/port)
 "oOG" = (
@@ -10448,7 +10553,7 @@
 /obj/structure/cable{
 	icon_state = "4-8"
 	},
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "phobos_shuttle_dock_door";
 	name = "Perseverance Docking Hatch"
@@ -10479,7 +10584,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/hall/shall)
 "oSJ" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/XIV/fuel/combust{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/xiv/combust{
 	dir = 1;
 	id_tag = "C_5_in"
 	},
@@ -10599,8 +10704,9 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/hall/shuthall/astarboard)
 "pbD" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock/XIV/paft{
-	dir = 1
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	dir = 1;
+	id_tag = "Perseverance_PAft_Pump"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/ship/perseverance/hall/ehall/port)
@@ -10784,7 +10890,7 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "dagger_shuttle_outer";
 	name = "Dagger Docking Hatch"
@@ -10997,7 +11103,7 @@
 /obj/structure/cable{
 	icon_state = "1-8"
 	},
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "dagger_shuttle_outer";
 	name = "Dagger Docking Hatch"
@@ -11262,8 +11368,11 @@
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/eng/atmos_out)
 "pYu" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock/XIV/pmid,
-/obj/machinery/airlock_sensor/XIV/pmid{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "Perseverance_PMid_Pump"
+	},
+/obj/machinery/airlock_sensor/xiv{
+	id_tag = "Perseverance_PMid_Sensor";
 	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -11309,9 +11418,10 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/sec/bot/saft)
 "qej" = (
-/obj/machinery/atmospherics/unary/vent_pump/tank/XIV/airtank2{
+/obj/machinery/atmospherics/unary/vent_pump/tank/xiv{
 	dir = 8;
-	icon_state = "map_vent_in"
+	id_tag = "airtank2_out";
+	use_power = 0
 	},
 /turf/simulated/floor/reinforced/airmix/XIV,
 /area/ship/perseverance/eng/atmos_out)
@@ -11866,7 +11976,9 @@
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/fore/miningprep)
 "rcj" = (
-/obj/machinery/door/airlock/external/bolted/XIV/pmid/external,
+/obj/machinery/door/airlock/external/bolted/xiv{
+	id_tag = "Perseverance_PMid_Out"
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/ship/perseverance/sec/bot/paft)
 "rcl" = (
@@ -11891,7 +12003,9 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/reactor)
 "rdn" = (
-/obj/machinery/air_sensor/XIV/fuel/O2_2,
+/obj/machinery/air_sensor{
+	id_tag = "O2_2_sensor"
+	},
 /turf/simulated/floor/reinforced/oxygen,
 /area/ship/perseverance/eng/fuelbay/starboard)
 "rdK" = (
@@ -11913,9 +12027,10 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ship/perseverance/hall/ehall/port)
 "rdX" = (
-/obj/machinery/atmospherics/unary/vent_pump/tank/XIV/airtank2{
+/obj/machinery/atmospherics/unary/vent_pump/tank/xiv{
 	dir = 4;
-	icon_state = "map_vent_in"
+	id_tag = "airtank2_out";
+	use_power = 0
 	},
 /turf/simulated/floor/reinforced/airmix/XIV,
 /area/ship/perseverance/eng/atmos_out)
@@ -11952,7 +12067,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
 	},
-/obj/machinery/access_button/airlock_interior/XIV/saft{
+/obj/machinery/access_button/airlock_interior/xiv{
+	master_tag = "Perseverance_SAft_Airlock";
 	pixel_x = -24;
 	pixel_y = 24
 	},
@@ -12035,7 +12151,7 @@
 /turf/simulated/floor/tiled/white,
 /area/ship/perseverance/midship/cryos)
 "rnH" = (
-/obj/machinery/computer/air_control/XIV/ventilation{
+/obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 8;
 	name = "Thrust Chamber Six Intake Control";
 	output_tag = "C_6_in";
@@ -12081,7 +12197,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 5
 	},
-/obj/machinery/access_button/airlock_interior/XIV/paft{
+/obj/machinery/access_button/airlock_interior/xiv{
+	master_tag = "Perseverance_PAft_Airlock";
 	pixel_x = 24;
 	pixel_y = 24
 	},
@@ -12109,11 +12226,13 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_in)
 "rsR" = (
-/obj/machinery/door/airlock/external/bolted/XIV/paft/external,
+/obj/machinery/door/airlock/external/bolted/xiv{
+	id_tag = "Perseverance_PAft_Out"
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/ship/perseverance/hall/ehall/port)
 "rsU" = (
-/obj/machinery/computer/air_control/XIV/ventilation{
+/obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 8;
 	name = "Thrust Chamber Eight Intake Control";
 	output_tag = "C_8_in";
@@ -12451,7 +12570,7 @@
 /turf/simulated/floor/airless,
 /area/ship/perseverance/eng/fuelbay)
 "rNw" = (
-/obj/machinery/atmospherics/pipe/simple/visible/fuel/advanced,
+/obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay/port)
 "rOe" = (
@@ -12459,7 +12578,7 @@
 	icon_state = "2-4"
 	},
 /obj/machinery/door/firedoor,
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "marshal_shuttle_dock_door";
 	name = "Perseverance Docking Hatch"
@@ -12734,7 +12853,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_out)
 "skU" = (
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "chimera_shuttle_outer";
 	name = "Chimera Docking Hatch"
@@ -12944,7 +13063,8 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/ship/perseverance/midship/cryop)
 "sEg" = (
-/obj/machinery/access_button/airlock_interior/XIV/pfore{
+/obj/machinery/access_button/airlock_interior/xiv{
+	master_tag = "Perseverance_PFore_Airlock";
 	pixel_x = 24;
 	pixel_y = -24
 	},
@@ -13026,9 +13146,10 @@
 /turf/simulated/floor/tiled/monotile,
 /area/shuttle/perseverance/mining)
 "sNK" = (
-/obj/machinery/atmospherics/unary/vent_pump/tank/XIV/airtank1{
+/obj/machinery/atmospherics/unary/vent_pump/tank/xiv{
 	dir = 8;
-	icon_state = "map_vent_in"
+	id_tag = "airtank1_out";
+	use_power = 0
 	},
 /turf/simulated/floor/reinforced/airmix/XIV,
 /area/ship/perseverance/eng/atmos_out)
@@ -13049,8 +13170,9 @@
 /turf/simulated/wall/r_wall/white,
 /area/ship/perseverance/eng/fuelbay/port)
 "sPc" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock/XIV/saft{
-	dir = 1
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	dir = 1;
+	id_tag = "Perseverance_SAft_Pump"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/ship/perseverance/hall/ehall/starboard)
@@ -13237,7 +13359,7 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/shuttle/perseverance/cargo)
 "tio" = (
-/obj/machinery/atmospherics/unary/vent_pump/tank/XIV/ventilation/inlet,
+/obj/machinery/atmospherics/unary/vent_pump/tank/xiv/ventilation/inlet,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_out)
 "tiz" = (
@@ -13271,8 +13393,10 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ship/perseverance/cargobay/fore)
 "tky" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/XIV/fuel/O2_1{
-	dir = 1
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/xiv{
+	dir = 1;
+	id_tag = "O2_1_in";
+	use_power = 0
 	},
 /turf/simulated/floor/reinforced/oxygen,
 /area/ship/perseverance/eng/fuelbay/port)
@@ -13289,7 +13413,9 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/midship/cryop)
 "tkX" = (
-/obj/machinery/door/airlock/external/bolted/XIV/pfore/external,
+/obj/machinery/door/airlock/external/bolted/xiv{
+	id_tag = "Perseverance_PFore_Out"
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/ship/perseverance/sec/bot/pmid)
 "tml" = (
@@ -13356,7 +13482,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_out)
 "tpy" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/XIV/fuel/combust{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/xiv/combust{
 	dir = 1;
 	id_tag = "C_2_in"
 	},
@@ -13514,7 +13640,9 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/fore/sciprep)
 "tBD" = (
-/obj/machinery/door/airlock/external/bolted/XIV/saft/external,
+/obj/machinery/door/airlock/external/bolted/xiv{
+	id_tag = "Perseverance_SAft_Out"
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/ship/perseverance/hall/ehall/starboard)
 "tEk" = (
@@ -13738,7 +13866,7 @@
 /turf/simulated/floor/tiled/white,
 /area/ship/perseverance/midship/infirmary)
 "tTX" = (
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "phobos_shuttle_outer";
 	name = "Phobos Docking Hatch"
@@ -14005,7 +14133,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/eng/atmos_in)
 "unJ" = (
-/obj/machinery/atmospherics/unary/vent_pump/tank/XIV/ventilation/outlet{
+/obj/machinery/atmospherics/unary/vent_pump/tank/xiv/ventilation/outlet{
 	dir = 1
 	},
 /obj/effect/catwalk_plated,
@@ -14170,7 +14298,7 @@
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay)
 "uAZ" = (
-/obj/machinery/computer/air_control/XIV/ventilation{
+/obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 1;
 	name = "Thrust Chamber Four Intake Control";
 	output_tag = "C_4_in";
@@ -14201,7 +14329,7 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "phobos_shuttle_dock_door";
 	name = "Perseverance Docking Hatch"
@@ -14253,7 +14381,10 @@
 /turf/simulated/floor/airless,
 /area/ship/perseverance/eng/fuelbay)
 "uJm" = (
-/obj/machinery/atmospherics/unary/outlet_injector/XIV/fuel/CO2_2,
+/obj/machinery/atmospherics/unary/outlet_injector/preset{
+	id = "CO2_2_in";
+	use_power = 0
+	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
 /area/ship/perseverance/eng/fuelbay/starboard)
 "uJA" = (
@@ -14313,7 +14444,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/cargobay/fore)
 "uPv" = (
-/obj/machinery/computer/air_control/XIV/ventilation{
+/obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 1;
 	name = "Thrust Chamber Five Intake Control";
 	output_tag = "C_5_in";
@@ -14342,7 +14473,9 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ship/perseverance/eng/reactor)
 "uTt" = (
-/obj/machinery/air_sensor/XIV/fuel/combust/c1,
+/obj/machinery/air_sensor{
+	id_tag = "C_1_sensor"
+	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay/port)
 "uTK" = (
@@ -14496,10 +14629,12 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ship/perseverance/eng/reactor)
 "vej" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock/XIV/saft{
-	dir = 4
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	dir = 4;
+	id_tag = "Perseverance_SAft_Pump"
 	},
-/obj/machinery/airlock_sensor/XIV/saft{
+/obj/machinery/airlock_sensor/xiv{
+	id_tag = "Perseverance_SAft_Sensor";
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -14589,7 +14724,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/sec/bot/saft)
 "vmg" = (
-/obj/machinery/computer/air_control/XIV/ventilation{
+/obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 4;
 	name = "Thrust Chamber Three Intake Control";
 	output_tag = "C_3_in";
@@ -14689,7 +14824,7 @@
 /obj/structure/cable{
 	icon_state = "1-2"
 	},
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "chimera_shuttle_dock_door";
 	name = "Perseverance Docking Hatch"
@@ -14832,7 +14967,9 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/hall/ehall/port)
 "vwd" = (
-/obj/machinery/door/airlock/external/bolted/XIV/paft/internal,
+/obj/machinery/door/airlock/external/bolted/xiv{
+	id_tag = "Perseverance_PAft_In"
+	},
 /turf/simulated/floor/tiled/steel_ridged,
 /area/ship/perseverance/hall/ehall/port)
 "vwg" = (
@@ -14867,10 +15004,17 @@
 /turf/simulated/floor/tiled/white/monotile,
 /area/ship/perseverance/midship/cryos)
 "vxB" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock/XIV/pmid,
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller/XIV/pmid{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	id_tag = "Perseverance_PMid_Pump"
+	},
+/obj/machinery/embedded_controller/radio/airlock/airlock_controller/xiv{
 	dir = 8;
-	pixel_x = 22
+	id_tag = "Perseverance_PMid_Airlock";
+	pixel_x = 22;
+	tag_airpump = "Perseverance_PMid_Pump";
+	tag_chamber_sensor = "Perseverance_PMid_Sensor";
+	tag_exterior_door = "Perseverance_PMid_Out";
+	tag_interior_door = "Perseverance_PMid_In"
 	},
 /turf/simulated/floor/tiled/steel_grid,
 /area/ship/perseverance/sec/bot/paft)
@@ -15076,7 +15220,7 @@
 "vMH" = (
 /obj/machinery/door/window/southright{
 	autoset_access = 0;
-	req_access = list("ACCESS_MEDICAL", "ACCESS_XION")
+	req_access = list("ACCESS_MEDICAL","ACCESS_XION")
 	},
 /turf/simulated/floor/tiled/white,
 /area/ship/perseverance/midship/infirmary)
@@ -15147,7 +15291,9 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/hall/shuthall/fport)
 "vVF" = (
-/obj/machinery/door/airlock/external/bolted/XIV/pfore/internal,
+/obj/machinery/door/airlock/external/bolted/xiv{
+	id_tag = "Perseverance_PFore_In"
+	},
 /obj/machinery/atmospherics/pipe/simple/hidden,
 /turf/simulated/floor/tiled/steel_ridged,
 /area/ship/perseverance/sec/bot/pmid)
@@ -15217,10 +15363,12 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ship/perseverance/cargobay/aft)
 "wbQ" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock/XIV/paft{
-	dir = 8
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	dir = 8;
+	id_tag = "Perseverance_PAft_Pump"
 	},
-/obj/machinery/airlock_sensor/XIV/paft{
+/obj/machinery/airlock_sensor/xiv{
+	id_tag = "Perseverance_PAft_Sensor";
 	pixel_y = 24
 	},
 /obj/structure/cable{
@@ -15664,7 +15812,8 @@
 /obj/machinery/atmospherics/pipe/simple/hidden{
 	dir = 9
 	},
-/obj/machinery/access_button/airlock_interior/XIV/smid{
+/obj/machinery/access_button/airlock_interior/xiv{
+	master_tag = "Perseverance_SMid_Airlock";
 	pixel_x = 24;
 	pixel_y = 24
 	},
@@ -15772,13 +15921,15 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_in)
 "wLJ" = (
-/obj/machinery/atmospherics/unary/vent_pump/tank/XIV/ventilation/outlet{
+/obj/machinery/atmospherics/unary/vent_pump/tank/xiv/ventilation/outlet{
 	dir = 1
 	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_in)
 "wLW" = (
-/obj/machinery/air_sensor/XIV/fuel/CO2_1,
+/obj/machinery/air_sensor{
+	id_tag = "CO2_1_sensor"
+	},
 /turf/simulated/floor/reinforced/carbon_dioxide,
 /area/ship/perseverance/eng/fuelbay/port)
 "wMi" = (
@@ -15976,7 +16127,7 @@
 /turf/simulated/floor/tiled/dark,
 /area/ship/perseverance/hall/ehall)
 "wZz" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/XIV/fuel/combust{
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/xiv/combust{
 	dir = 1;
 	id_tag = "C_4_in"
 	},
@@ -16073,10 +16224,12 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/shuttle/perseverance/mining)
 "xfD" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock/XIV/pfore{
-	dir = 1
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/airlock{
+	dir = 1;
+	id_tag = "Perseverance_PFore_Pump"
 	},
-/obj/machinery/airlock_sensor/XIV/pfore{
+/obj/machinery/airlock_sensor/xiv{
+	id_tag = "Perseverance_PFore_Sensor";
 	pixel_x = -24
 	},
 /turf/simulated/floor/tiled/steel_grid,
@@ -16316,7 +16469,8 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/reactor)
 "xrr" = (
-/obj/machinery/access_button/airlock_exterior/XIV/smid{
+/obj/machinery/access_button/airlock_exterior/xiv{
+	master_tag = "Perseverance_SMid_Airlock";
 	pixel_x = 24;
 	pixel_y = -24
 	},
@@ -16407,7 +16561,7 @@
 /obj/structure/cable{
 	icon_state = "2-4"
 	},
-/obj/machinery/door/airlock/external/bolted/XIV{
+/obj/machinery/door/airlock/external/bolted/xiv{
 	frequency = 1339;
 	id_tag = "marshal_shuttle_outer";
 	name = "Marshal Docking Hatch"
@@ -16540,7 +16694,7 @@
 	id_tag = "C_1_igniter";
 	pixel_x = -24
 	},
-/obj/machinery/atmospherics/pipe/simple/visible/fuel/advanced,
+/obj/machinery/atmospherics/pipe/simple/visible/fuel,
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay/port)
 "xKO" = (
@@ -16741,8 +16895,10 @@
 /turf/simulated/floor/tiled/freezer,
 /area/ship/perseverance/midship/bathroom)
 "xVN" = (
-/obj/machinery/atmospherics/unary/vent_pump/high_volume/XIV/fuel/H2_1{
-	dir = 1
+/obj/machinery/atmospherics/unary/vent_pump/high_volume/xiv{
+	dir = 1;
+	id_tag = "H2_1_out";
+	use_power = 0
 	},
 /turf/simulated/floor/reinforced/hydrogen,
 /area/ship/perseverance/eng/fuelbay/port)

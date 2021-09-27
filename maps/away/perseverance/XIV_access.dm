@@ -1,6 +1,5 @@
-/var/const/access_XIV = "ACCESS_XION"
-/datum/access/XIV
-	id = access_XIV
+/var/const/access_xiv = "ACCESS_XION"
+/datum/access/xiv
+	id = access_xiv
 	desc = "Xion Industries Access"
-	region = ACCESS_REGION_GENERAL
-	access_type = ACCESS_TYPE_NONE
+	region = ACCESS_REGION_NONE
