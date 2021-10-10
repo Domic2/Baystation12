@@ -5,7 +5,7 @@
 	id = "awaysite_perseverance"
 	description = "An old exploration ship repurposed for testing experimental equipment. Looks like something went wrong..."
 	suffixes = list("perseverance/Perseverance_1.dmm","perseverance/Perseverance_2.dmm")
-	spawn_cost = 1
+	spawn_cost = 2
 	shuttles_to_initialise = list(
 		/datum/shuttle/autodock/overmap/mining,
 		/datum/shuttle/autodock/overmap/cargo,
