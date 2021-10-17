@@ -159,6 +159,10 @@
 	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/sec/top/pfore)
+"ba" = (
+/obj/effect/floor_decal/industrial/warning,
+/turf/simulated/floor/tiled/dark,
+/area/ship/perseverance/sci/general)
 "bc" = (
 /obj/machinery/power/apc{
 	dir = 1
@@ -3894,6 +3898,7 @@
 /obj/item/device/integrated_electronics/analyzer,
 /obj/item/device/integrated_electronics/debugger,
 /obj/item/device/integrated_electronics/wirer,
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/dark,
 /area/ship/perseverance/sci/general)
 "ss" = (
@@ -3990,6 +3995,7 @@
 "sN" = (
 /obj/structure/table/standard,
 /obj/machinery/reagent_temperature,
+/obj/effect/floor_decal/industrial/warning,
 /turf/simulated/floor/tiled/dark,
 /area/ship/perseverance/sci/general)
 "sO" = (
@@ -4267,12 +4273,6 @@
 /obj/machinery/power/apc/high,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/sci/general)
-"tU" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 9
-	},
-/turf/simulated/floor/tiled/white,
-/area/ship/perseverance/sci/general)
 "tV" = (
 /obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
@@ -4285,9 +4285,6 @@
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay/upper)
 "tW" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
 /obj/machinery/alarm{
 	dir = 1
 	},
@@ -4711,9 +4708,6 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/ventilation/blue/aft)
 "vZ" = (
-/obj/effect/floor_decal/industrial/warning{
-	dir = 1
-	},
 /turf/simulated/floor/tiled/white,
 /area/ship/perseverance/sci/general)
 "wa" = (
@@ -34553,7 +34547,7 @@ nz
 qQ
 oV
 qR
-Mv
+ba
 tT
 XF
 XF
@@ -34755,8 +34749,8 @@ gb
 qQ
 oX
 Mv
-Mv
-tU
+ba
+vZ
 XF
 Eq
 zq
@@ -34957,7 +34951,7 @@ gb
 qQ
 iL
 Vg
-Mv
+ba
 tW
 XF
 XF
