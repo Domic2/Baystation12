@@ -30,6 +30,7 @@ obj/machinery/atmospherics/unary/vent_pump/tank/xiv
 	use_power = 1
 	internal_pressure_bound = 4000
 	internal_pressure_bound_default = 4000
+	pump_direction = 0
 
 obj/machinery/atmospherics/unary/vent_pump/high_volume/xiv
 	stock_part_presets = list(
@@ -81,9 +82,9 @@ obj/machinery/atmospherics/unary/outlet_injector/preset
 	id_tag = "ventilation_in"
 	external_pressure_bound = 1.1 * ONE_ATMOSPHERE
 	external_pressure_bound_default = 1.1 * ONE_ATMOSPHERE//turns out defaults don't matter at all when being operated by the air control computer, "default pressure" is always approx. 4500 kPa
+	pump_direction = 1
 
 /obj/machinery/atmospherics/unary/vent_pump/tank/xiv/ventilation/outlet
-	pump_direction = 0
 	icon_state = "map_vent_in"
 	id_tag = "ventilation_out"
 	external_pressure_bound = 0.9 * ONE_ATMOSPHERE

@@ -40,9 +40,6 @@
 /obj/machinery/door/airlock/autoname/civilian
 	stripe_color = COLOR_CIVIE_GREEN
 
-/obj/machinery/door/airlock/autonames
-	stripe_color = COLOR_RED
-
 /obj/machinery/door/airlock/autoname/supply
 	door_color = COLOR_PALE_ORANGE
 	stripe_color = COLOR_BEASTY_BROWN
@@ -62,7 +59,7 @@
 // Autoname multitile glass airlocks
 /obj/machinery/door/airlock/multi_tile/glass/autoname
 
-/obj/machinery/door/airlock/multi_tile/glass/autoname/New()
+/obj/machinery/door/airlock/multi_tile/glass/autoname/Initialize()
 	var/area/A = get_area(src)
 	name = A.name
 	..()
@@ -100,25 +97,10 @@
 
 /obj/item/device/radio/headset/contractor
 	name = "contractor headset"
-	desc = "A headset often used by contractors on ships where having a full communications system is simply too expensive."
-	item_state = "cargo_headset" //not alt headset sprite because they look bad on other species
+	desc = "A cheap headset usually seen on small ships."
+	item_state = "cargo_headset" //alt looks bad on nonhumans
 	icon_state = "cargo_headset"
-	max_keys = 3
-
-/obj/item/storage/belt/utility/full/XIV/New()
-	..()
-	new /obj/item/device/multitool(src)
-	update_icon()
-
-/obj/machinery/suit_cycler/mining/XIV
-	req_access = list()
-
-/obj/machinery/suit_cycler/engineering/alt/XIV
-	req_access = list()
-
-/obj/item/device/multitool
-	icon = 'maps/away/perseverance/icons/obj/multitool.dmi'
-	icon_state = "multitool"
+	max_keys = 0
 
 // The ship has (furure code) been out of power for a bit, these are fairly good at showcasing that
 
@@ -128,10 +110,10 @@
 /obj/item/cell/apc/low
 	charge = 200
 
-/obj/machinery/power/apc/XIV/empty
+/obj/machinery/power/apc/xiv/empty
 	cell_type = /obj/item/cell/apc/empty
 
-/obj/machinery/power/apc/XIV/low
+/obj/machinery/power/apc/xiv/low
 	cell_type = /obj/item/cell/apc/low
 
 /obj/machinery/power/apc/high/empty
@@ -204,7 +186,7 @@
 /turf/simulated/wall/ocp_wall/prepainted
 	paint_color = COLOR_GUNMETAL
 
-/obj/structure/closet/secure_closet/freezer/kitchen/XIV
+/obj/structure/closet/secure_closet/freezer/kitchen/no_req
 	req_access = list()
 
 /turf/simulated/floor/shuttle_ceiling/dark
@@ -216,24 +198,24 @@
 	closet_appearance = null
 	req_access = list()
 
-/turf/simulated/floor/reinforced/airmix/XIV
+/turf/simulated/floor/reinforced/airmix/xiv
 	initial_gas = list(GAS_OXYGEN = 2 * MOLES_O2ATMOS, GAS_NITROGEN = 2 * MOLES_N2ATMOS)
 
 // This is for the multi-z gas tanks
 
-/turf/simulated/open/XIV/airmix
+/turf/simulated/open/xiv/airmix
 	initial_gas = list(GAS_OXYGEN = 2 * MOLES_O2ATMOS, GAS_NITROGEN = 2 * MOLES_N2ATMOS)
 
-/turf/simulated/open/XIV/hydrogen
+/turf/simulated/open/xiv/hydrogen
 	initial_gas = list(GAS_HYDROGEN = ATMOSTANK_HYDROGEN)
 
-/turf/simulated/open/XIV/oxygen
+/turf/simulated/open/xiv/oxygen
 	initial_gas = list(GAS_OXYGEN = ATMOSTANK_OXYGEN)
 
-/turf/simulated/open/XIV/carbon_dioxide
+/turf/simulated/open/xiv/carbon_dioxide
 	initial_gas = list(GAS_CO2 = ATMOSTANK_CO2)
 
-/turf/simulated/open/XIV/airless//for the aft fuel bay
+/turf/simulated/open/xiv/airless//for the aft fuel bay
 	initial_gas = null
 
 /turf/simulated/floor/tiled/techfloor/grid/airless
@@ -247,7 +229,7 @@
 
 //SMES
 
-/obj/machinery/power/smes/buildable/preset/XIV
+/obj/machinery/power/smes/buildable/preset/xiv
 	_input_maxed = TRUE
 	_output_maxed = TRUE
 	_input_on = TRUE
@@ -255,32 +237,32 @@
 	_fully_charged = TRUE
 
 // Main Engine output SMES, plus empty version
-/obj/machinery/power/smes/buildable/preset/XIV/engine_main
+/obj/machinery/power/smes/buildable/preset/xiv/engine_main
 	uncreated_component_parts = list(
 		/obj/item/stock_parts/smes_coil/super_io = 2,
 		/obj/item/stock_parts/smes_coil/super_capacity =	 1)
 
-/obj/machinery/power/smes/buildable/preset/XIV/engine_main/empty
+/obj/machinery/power/smes/buildable/preset/xiv/engine_main/empty
 	_fully_charged = FALSE
 
 // Main Engine internal SMES, for powering the gyrotron and the actual room, doesn't need super high capacity, but it does need I/O
-/obj/machinery/power/smes/buildable/preset/XIV/engine_central
+/obj/machinery/power/smes/buildable/preset/xiv/engine_central
 	uncreated_component_parts = list(
 		/obj/item/stock_parts/smes_coil/super_io = 1)
 
 // Shuttle SMES, higher capacity
-/obj/machinery/power/smes/buildable/preset/XIV/shuttles
+/obj/machinery/power/smes/buildable/preset/xiv/shuttles
 	uncreated_component_parts = list(
 		/obj/item/stock_parts/smes_coil/super_capacity =	 1)
 
 //Crates
 
-/obj/structure/closet/crate/actual_radiation_gear
+/obj/structure/closet/crate/rads
 	name = "radioactive gear crate"
 	desc = "A crate with a radiation sign on it."
 	closet_appearance = /decl/closet_appearance/crate/radiation
 
-/obj/structure/closet/crate/actual_radiation_gear/WillContain()
+/obj/structure/closet/crate/rads/WillContain()
 	return list(/obj/item/clothing/suit/radiation = 4,
 				/obj/item/clothing/head/radiation = 4) //other radiation closet only gives the suit ??? What???
 
@@ -303,18 +285,6 @@
 	icon_state = "emergency_double_blue"
 
 //Should be removed at some point, but it works and should not cause any trouble
-
-obj/machinery/conveyor/XIV/shuttletosci
-	id = "shuttletosci"
-
-obj/machinery/conveyor_switch/oneway/XIV/shuttletosci
-	id = "shuttletosci"
-
-obj/machinery/conveyor/XIV/scitoshuttle
-	id = "scitoshuttle"
-
-obj/machinery/conveyor_switch/oneway/XIV/scitoshuttle
-	id = "scitoshuttle"
 
 obj/machinery/atmospherics/unary/outlet_injector/waste
 	volume_rate = 700
@@ -341,53 +311,6 @@ obj/machinery/atmospherics/unary/outlet_injector/waste
 
 	return 0
 
-/obj/structure/closet/toolcloset/XIV/New()//normal closet, with removed insulateds
-	..()
-	if(prob(40))
-		new /obj/item/clothing/suit/storage/hazardvest(src)
-	if(prob(70))
-		new /obj/item/device/flashlight(src)
-	if(prob(70))
-		new /obj/item/screwdriver(src)
-	if(prob(70))
-		new /obj/item/wrench(src)
-	if(prob(70))
-		new /obj/item/weldingtool(src)
-	if(prob(70))
-		new /obj/item/crowbar(src)
-	if(prob(70))
-		new /obj/item/wirecutters(src)
-	if(prob(70))
-		new /obj/item/device/t_scanner(src)
-	if(prob(20))
-		new /obj/item/storage/belt/utility(src)
-	if(prob(30))
-		new /obj/item/stack/cable_coil/random(src)
-	if(prob(30))
-		new /obj/item/stack/cable_coil/random(src)
-	if(prob(30))
-		new /obj/item/stack/cable_coil/random(src)
-	if(prob(20))
-		new /obj/item/device/multitool(src)
-	if(prob(40))
-		new /obj/item/clothing/head/hardhat(src)
-
-/obj/structure/closet/excavation/XIV/New()//normal excavation closet, with a bit less gear
-	..()
-	new /obj/item/storage/belt/archaeology(src)
-	new /obj/item/storage/excavation(src)
-	new /obj/item/device/flashlight(src)
-	new /obj/item/device/ano_scanner(src)
-	new /obj/item/device/depth_scanner(src)
-	new /obj/item/device/core_sampler(src)
-	new /obj/item/device/gps(src)
-	new /obj/item/clothing/glasses/meson(src)
-	new /obj/item/pickaxe(src)
-	new /obj/item/device/measuring_tape(src)
-	new /obj/item/pickaxe/xeno/hand(src)
-	new /obj/item/storage/bag/fossils(src)
-	new /obj/item/hand_labeler(src)
-
 //uses New() instead of Initialize(), and it does not work (when initialized). This fixes it.
 /turf/space/transit/east/Initialize()
 	..()
@@ -406,7 +329,3 @@ obj/machinery/atmospherics/unary/outlet_injector/waste
 	var/turf/T = get_turf(loc)
 	if(T)
 		T.blocks_air = 1
-
-/obj/machinery/computer/rdconsole/xiv
-	name = "robotics fabricator console"
-	id = 4

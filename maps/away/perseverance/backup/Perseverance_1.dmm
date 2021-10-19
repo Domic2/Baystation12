@@ -129,7 +129,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_in)
 "ahd" = (
-/obj/machinery/computer/air_control/XIV/ventilation{
+/obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 1;
 	name = "Thrust Chamber Two Intake Control";
 	output_tag = "C_2_in";
@@ -256,8 +256,9 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/sec/bot/pfore)
 "aoE" = (
-/obj/machinery/conveyor/XIV/shuttletosci{
-	dir = 1
+/obj/machinery/conveyor{
+	dir = 1;
+	id = "xiv_shuttletosci"
 	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/fore/sciprep)
@@ -329,7 +330,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-8"
 	},
-/obj/machinery/power/smes/buildable/preset/XIV/engine_central,
+/obj/machinery/power/smes/buildable/preset/xiv/engine_central,
 /obj/machinery/light,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/reactor)
@@ -922,7 +923,7 @@
 /area/shuttle/perseverance/scouting)
 "bko" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible/cyan,
-/turf/simulated/floor/reinforced/airmix/XIV,
+/turf/simulated/floor/reinforced/airmix/xiv,
 /area/ship/perseverance/eng/atmos_out)
 "bkw" = (
 /obj/structure/catwalk,
@@ -1076,7 +1077,7 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable/preset/XIV/engine_main,
+/obj/machinery/power/smes/buildable/preset/xiv/engine_main,
 /obj/machinery/light,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/reactor)
@@ -1522,7 +1523,7 @@
 /area/ship/perseverance/eng/atmos_in)
 "cfn" = (
 /obj/effect/floor_decal/industrial/outline/grey,
-/obj/structure/closet/excavation/XIV,
+/obj/structure/closet/excavation,
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/fore/sciprep)
 "cfz" = (
@@ -1822,7 +1823,7 @@
 /area/ship/perseverance/hall/shuthall/fport)
 "cDt" = (
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan,
-/turf/simulated/floor/reinforced/airmix/XIV,
+/turf/simulated/floor/reinforced/airmix/xiv,
 /area/ship/perseverance/eng/atmos_out)
 "cDI" = (
 /turf/simulated/wall/titanium/research,
@@ -2399,7 +2400,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/reactor)
 "dtd" = (
-/obj/machinery/computer/air_control/XIV/ventilation{
+/obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 1;
 	name = "Ventilation Outlet System Control Console";
 	output_tag = "ventilation_out";
@@ -3401,7 +3402,7 @@
 /turf/simulated/floor/airless,
 /area/ship/perseverance/eng/fuelbay/starboard)
 "eRl" = (
-/obj/machinery/power/smes/buildable/preset/XIV/shuttles,
+/obj/machinery/power/smes/buildable/preset/xiv/shuttles,
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
@@ -3488,10 +3489,10 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_in)
 "eZH" = (
-/obj/machinery/computer/modular/preset/aislot/research,
 /obj/machinery/light/small{
 	dir = 1
 	},
+/obj/machinery/computer/rcon,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/reactor)
 "fan" = (
@@ -3833,7 +3834,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/fuelbay_monitoring)
 "fwk" = (
-/obj/machinery/computer/air_control/XIV/ventilation{
+/obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 1;
 	name = "Ventilation Inlet System Control Console";
 	output_tag = "ventilation_in";
@@ -6103,11 +6104,11 @@
 /turf/simulated/floor/tiled/white,
 /area/ship/perseverance/midship/infirmary)
 "iyh" = (
-/obj/machinery/computer/modular/preset/engineering{
-	dir = 4
-	},
 /obj/structure/railing/mapped{
 	dir = 8
+	},
+/obj/machinery/computer/power_monitor{
+	dir = 4
 	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/reactor)
@@ -6429,7 +6430,7 @@
 "iXO" = (
 /obj/item/material/knife/kitchen,
 /obj/item/material/kitchen/rollingpin,
-/obj/structure/closet/secure_closet/freezer/kitchen/XIV,
+/obj/structure/closet/secure_closet/freezer/kitchen/xiv,
 /obj/item/storage/box/glasses/square,
 /obj/item/book/manual/chef_recipes,
 /turf/simulated/floor/plating,
@@ -7086,7 +7087,7 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ship/perseverance/hall/ehall/starboard)
 "jVl" = (
-/obj/machinery/power/smes/buildable/preset/XIV/shuttles,
+/obj/machinery/power/smes/buildable/preset/xiv/shuttles,
 /obj/structure/cable{
 	icon_state = "0-2"
 	},
@@ -7299,7 +7300,7 @@
 /obj/structure/cable{
 	icon_state = "0-8"
 	},
-/obj/machinery/power/smes/buildable/preset/XIV/engine_main,
+/obj/machinery/power/smes/buildable/preset/xiv/engine_main,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/reactor)
 "kif" = (
@@ -7680,8 +7681,9 @@
 /turf/simulated/floor/tiled,
 /area/ship/perseverance/cargobay/centre)
 "kHa" = (
-/obj/machinery/conveyor/XIV/shuttletosci{
-	dir = 8
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "xiv_shuttletosci"
 	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/fore/sciprep)
@@ -7734,7 +7736,7 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
 	dir = 4
 	},
-/turf/simulated/floor/reinforced/airmix/XIV,
+/turf/simulated/floor/reinforced/airmix/xiv,
 /area/ship/perseverance/eng/atmos_out)
 "kKN" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -7880,7 +7882,7 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ship/perseverance/eng/reactor)
 "kVk" = (
-/obj/machinery/power/smes/buildable/preset/XIV/shuttles,
+/obj/machinery/power/smes/buildable/preset/xiv/shuttles,
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
@@ -7895,7 +7897,7 @@
 /obj/machinery/atmospherics/pipe/simple/visible/cyan{
 	dir = 9
 	},
-/turf/simulated/floor/reinforced/airmix/XIV,
+/turf/simulated/floor/reinforced/airmix/xiv,
 /area/ship/perseverance/eng/atmos_out)
 "kZc" = (
 /obj/machinery/atmospherics/pipe/simple/hidden/scrubbers{
@@ -7972,7 +7974,7 @@
 	id_tag = "airtank1_out";
 	use_power = 0
 	},
-/turf/simulated/floor/reinforced/airmix/XIV,
+/turf/simulated/floor/reinforced/airmix/xiv,
 /area/ship/perseverance/eng/atmos_out)
 "ldc" = (
 /obj/effect/floor_decal/corner/green/half,
@@ -8290,10 +8292,11 @@
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay)
 "lyV" = (
-/obj/machinery/conveyor/XIV/shuttletosci{
-	dir = 4
-	},
 /obj/structure/railing/mapped,
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "xiv_shuttletosci"
+	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/fore/sciprep)
 "lzu" = (
@@ -8698,10 +8701,10 @@
 /area/shuttle/perseverance/mining)
 "mdt" = (
 /obj/structure/railing/mapped,
-/obj/machinery/computer/modular/preset/medical{
+/obj/effect/floor_decal/corner/paleblue/half,
+/obj/machinery/computer/crew{
 	dir = 1
 	},
-/obj/effect/floor_decal/corner/paleblue/half,
 /turf/simulated/floor/tiled/white/monotile,
 /area/ship/perseverance/midship/infirmary)
 "mep" = (
@@ -8715,7 +8718,7 @@
 /turf/simulated/floor/tiled/steel_grid,
 /area/ship/perseverance/sec/bot/saft)
 "mgs" = (
-/obj/machinery/computer/air_control/XIV/ventilation{
+/obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 4;
 	name = "Thrust Chamber One Intake Control";
 	output_tag = "C_1_in";
@@ -9305,8 +9308,9 @@
 /area/ship/perseverance/eng/reactor)
 "neg" = (
 /obj/structure/plasticflaps/airtight,
-/obj/machinery/conveyor/XIV/shuttletosci{
-	dir = 8
+/obj/machinery/conveyor{
+	dir = 8;
+	id = "xiv_shuttletosci"
 	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/fore/sciprep)
@@ -9660,6 +9664,15 @@
 /obj/machinery/atmospherics/pipe/zpipe/up/fuel,
 /turf/simulated/floor/airless,
 /area/ship/perseverance/eng/fuelbay)
+"nDn" = (
+/obj/structure/railing/mapped{
+	dir = 4
+	},
+/obj/machinery/computer/atmos_alert{
+	dir = 8
+	},
+/turf/simulated/floor/plating,
+/area/ship/perseverance/eng/reactor)
 "nDD" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
 /obj/structure/closet/crate/freezer/meat,
@@ -10089,8 +10102,9 @@
 /area/ship/perseverance/eng/atmos_in)
 "onM" = (
 /obj/structure/plasticflaps/airtight,
-/obj/machinery/conveyor/XIV/shuttletosci{
-	dir = 4
+/obj/machinery/conveyor{
+	dir = 4;
+	id = "xiv_shuttletosci"
 	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/fore/sciprep)
@@ -10098,7 +10112,7 @@
 /obj/structure/railing/mapped{
 	dir = 4
 	},
-/obj/machinery/computer/modular/preset/engineering{
+/obj/machinery/computer/station_alert/engineering{
 	dir = 8
 	},
 /turf/simulated/floor/plating,
@@ -10467,7 +10481,7 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/ship/perseverance/fore/miningprep)
 "oLM" = (
-/obj/machinery/computer/air_control/XIV/ventilation{
+/obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 1;
 	name = "Thrust Chamber Seven Intake Control";
 	output_tag = "C_7_in";
@@ -11423,7 +11437,7 @@
 	id_tag = "airtank2_out";
 	use_power = 0
 	},
-/turf/simulated/floor/reinforced/airmix/XIV,
+/turf/simulated/floor/reinforced/airmix/xiv,
 /area/ship/perseverance/eng/atmos_out)
 "qel" = (
 /obj/effect/floor_decal/corner/white/half{
@@ -12032,7 +12046,7 @@
 	id_tag = "airtank2_out";
 	use_power = 0
 	},
-/turf/simulated/floor/reinforced/airmix/XIV,
+/turf/simulated/floor/reinforced/airmix/xiv,
 /area/ship/perseverance/eng/atmos_out)
 "res" = (
 /obj/machinery/atmospherics/portables_connector,
@@ -12151,7 +12165,7 @@
 /turf/simulated/floor/tiled/white,
 /area/ship/perseverance/midship/cryos)
 "rnH" = (
-/obj/machinery/computer/air_control/XIV/ventilation{
+/obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 8;
 	name = "Thrust Chamber Six Intake Control";
 	output_tag = "C_6_in";
@@ -12232,7 +12246,7 @@
 /turf/simulated/floor/tiled/steel_ridged,
 /area/ship/perseverance/hall/ehall/port)
 "rsU" = (
-/obj/machinery/computer/air_control/XIV/ventilation{
+/obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 8;
 	name = "Thrust Chamber Eight Intake Control";
 	output_tag = "C_8_in";
@@ -12592,7 +12606,7 @@
 /obj/structure/cable/yellow{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable/preset/XIV/engine_central,
+/obj/machinery/power/smes/buildable/preset/xiv/engine_central,
 /obj/machinery/light,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/reactor)
@@ -13151,7 +13165,7 @@
 	id_tag = "airtank1_out";
 	use_power = 0
 	},
-/turf/simulated/floor/reinforced/airmix/XIV,
+/turf/simulated/floor/reinforced/airmix/xiv,
 /area/ship/perseverance/eng/atmos_out)
 "sOs" = (
 /obj/machinery/power/terminal,
@@ -13269,7 +13283,9 @@
 /area/shuttle/perseverance/scouting)
 "sYA" = (
 /obj/effect/floor_decal/industrial/outline/yellow,
-/obj/machinery/conveyor_switch/oneway/XIV/shuttletosci,
+/obj/machinery/conveyor_switch/oneway{
+	id = "xiv_shuttletosci"
+	},
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/fore/sciprep)
 "sYK" = (
@@ -13342,9 +13358,9 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/shuttle/perseverance/cpod)
 "tfJ" = (
-/obj/machinery/conveyor/XIV/shuttletosci{
+/obj/machinery/conveyor{
 	dir = 6;
-	movedir = 1
+	id = "xiv_shuttletosci"
 	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/fore/sciprep)
@@ -14160,7 +14176,7 @@
 /obj/structure/cable{
 	icon_state = "0-4"
 	},
-/obj/machinery/power/smes/buildable/preset/XIV/engine_main,
+/obj/machinery/power/smes/buildable/preset/xiv/engine_main,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/reactor)
 "upF" = (
@@ -14298,7 +14314,7 @@
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/eng/fuelbay)
 "uAZ" = (
-/obj/machinery/computer/air_control/XIV/ventilation{
+/obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 1;
 	name = "Thrust Chamber Four Intake Control";
 	output_tag = "C_4_in";
@@ -14444,7 +14460,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/cargobay/fore)
 "uPv" = (
-/obj/machinery/computer/air_control/XIV/ventilation{
+/obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 1;
 	name = "Thrust Chamber Five Intake Control";
 	output_tag = "C_5_in";
@@ -14724,7 +14740,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/sec/bot/saft)
 "vmg" = (
-/obj/machinery/computer/air_control/XIV/ventilation{
+/obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 4;
 	name = "Thrust Chamber Three Intake Control";
 	output_tag = "C_3_in";
@@ -16870,7 +16886,7 @@
 /obj/machinery/atmospherics/pipe/manifold/visible/cyan{
 	dir = 8
 	},
-/turf/simulated/floor/reinforced/airmix/XIV,
+/turf/simulated/floor/reinforced/airmix/xiv,
 /area/ship/perseverance/eng/atmos_out)
 "xVa" = (
 /obj/structure/table/rack,
@@ -36431,7 +36447,7 @@ rfb
 ifV
 ifV
 onZ
-onZ
+nDn
 gzH
 xrf
 odV
@@ -36633,7 +36649,7 @@ rfb
 ifV
 ifV
 iyh
-iyh
+xSx
 gzH
 yjL
 ifV
