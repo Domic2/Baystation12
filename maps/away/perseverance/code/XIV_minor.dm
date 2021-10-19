@@ -291,26 +291,6 @@ obj/machinery/atmospherics/unary/outlet_injector/waste
 	icon_state = "on"
 	use_power = 1
 
-/mob/Check_Dense_Object() //this is from mob_movement.dm, there's a bug where open spaces are not checked so magboots treat them as solid objects they can grip. That's a nope from me, time to override
-
-	var/shoegrip = Check_Shoegrip()
-
-	for(var/turf/simulated/T in trange(1,src)) //we only care for non-space turfs
-		if(T.density)	//walls work
-			return 1
-		else
-			var/area/A = T.loc
-			if(A.has_gravity || (shoegrip && !istype(T, /turf/simulated/open)))//only change I made is here. Works like a charm
-				return 1
-
-	for(var/obj/O in orange(1, src))
-		if(istype(O, /obj/structure/lattice))
-			return 1
-		if(O && O.density && O.anchored)
-			return 1
-
-	return 0
-
 //uses New() instead of Initialize(), and it does not work (when initialized). This fixes it.
 /turf/space/transit/east/Initialize()
 	..()
