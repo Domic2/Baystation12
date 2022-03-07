@@ -1,15 +1,12 @@
-//bsdrivestatus and bsdrivedelay are in evacuation_bspods.dm
-
 /obj/machinery/bluespacedrive
 	name = "Bluespace drive"
-	desc = "This complex device permits safe entry into bluespace."
+	desc = "This complex device permits safe entry into bluespace. "
 	icon = 'maps/away/perseverance/icons/bsdrive.dmi'
-	icon_state = "dmdrive_1"//otherwise invisible when mapping
+	icon_state = "dmdrive_1"
 	density = 1
 	anchored = 1
-	var/bsdrivestatus
 	var/phcheck = null//0 = no phoron, 1 = enough phoron, 2 = too much phoron
-	var/mode = 1 //2 is active, acively takes phoron from the air, takes minor coordination for a big time save. A bit risky.
+	var/mode = 1 //2 is active, actively takes phoron from the air, takes minor coordination for a big time save. A bit risky.
 	// 1 is passive, it requires some phoron to be present only when jumping, but also needs a much longer spoolup time .
 
 /obj/machinery/bluespacedrive/Process()
@@ -29,97 +26,57 @@
 		if (phinair > 85)
 			overlays = list("ind4")
 		if (phinair > 95)
+			if (mode == 2)
+				bigboom()
+				return
 			overlays = list("uhoh")
-			phcheck = 2
 	else
 		phcheck = 0
 		overlays = list("ind0")
 
 	if (air.total_moles - air.gas[GAS_PHORON] > 10)
 		contaminated = 1
+		if (mode == 2)
+			bigboom()
+			return
 		overlays = list("uhoh")
 	else
 		contaminated = 0
 
-	if (bsdrivestatus > 2)
-		mode = 0
-		if (bsdrivestatus == 3)
-			air.remove(air.total_moles)//om nom nom
-			if (icon_state != "dmdrive_1_on" && icon_state != "dmdrive_1_injecting")
-				icon_state = "dmdrive_1_on"
-				flick ("dmdrive_1_injecting", src)
+	if (mode == 2)
+		air.remove(air.total_moles * 0.2)
 
-		if (bsdrivestatus == 4)
-			if (icon_state != "dmdrive_2_on" && icon_state != "dmdrive_2_injecting")
-				icon_state = "dmdrive_2_on"
-				flick ("dmdrive_2_injecting", src)
-
-		if (bsdrivestatus == 5)
-			mode = 1
-			icon_state = "dmdrive_1"
-			playsound(src.loc, 'sound/machines/blastdoor_close.ogg', 50, 1)
-			flick ("dmdrive_1_done", src)
-			bsdrivestatus = 1
-
-		if (bsdrivestatus == 6)
-			mode = 1
-			icon_state = "dmdrive_1"
-			playsound(src.loc, 'sound/machines/blastdoor_close.ogg', 50, 1)
-			flick ("dmdrive_2_done", src)
-			bsdrivestatus = 1
-
-	if (mode == 1)
-		if (phcheck == 1 && bsdrivestatus != -1)
-			bsdrivestatus = 1
-		else
-			bsdrivestatus = 0
-
-	if (mode == 2 || bsdrivestatus == 4)
-		air.remove(air.total_moles * 0.2)//consumption scales up with the number of moles in the air
-		if (phcheck != 1 || contaminated == 1)
-			mode = 0
-			log_and_message_admins("The bluespace drive encountered a critical error at [x], [y], [z], and will now detonate.")
-			GLOB.global_announcer.autosay("WARNING: BLUESPACE TEATHER SEVERED.", "Auxiliary bluespace monitor")
-			bigboom()
-		else if (bsdrivestatus != -1 && bsdrivestatus != 4)
-			bsdrivestatus = 2
-
-		for(var/mob/living/carbon/human/subject in view(src, 5))//MESONS, PEOPLE!
+		for(var/mob/living/carbon/human/subject in view(src, 5))
 			var/obj/item/organ/internal/eyes/eyes = subject.internal_organs_by_name[BP_EYES]
 			if (!eyes)
 				continue
 			if (BP_IS_ROBOTIC(eyes))
 				continue
-			if(subject.has_meson_effect())
+			if (subject.has_meson_effect())
 				continue
 			var/effect = max(0, min(200, 9 * sqrt( 1 / max(1,get_dist(subject, src)))) )
 			subject.adjust_hallucination(effect, 0.25 * effect)
 
 /obj/machinery/bluespacedrive/proc/open()
-	GLOB.global_announcer.autosay("WARNING: BLUESPACE DRIVE ENTERING RAPID REACTION MODE.", "Bluespace monitor")
-	log_and_message_admins("The bluespace drive entered mode 2 at [x], [y], [z]")
+
+	GLOB.global_announcer.autosay("WARNING: BLUESPACE DRIVE ENTERING RAPID REACTION MODE.", "Auxiliary Bluespace Monitor")
 
 	mode = 2
-	playsound(src.loc,'sound/machines/blastdoor_open.ogg', 50, 1)// its good
+	playsound(src.loc,'sound/machines/blastdoor_open.ogg', 50, 1)
 	icon_state = "dmdrive_2"
 	flick("dmdrive_opening", src)
-	sleep (10)
-	bsdrivestatus = 0
 
 /obj/machinery/bluespacedrive/proc/close()
-	log_and_message_admins("The bluespace drive entered mode 1 at [x], [y], [z]")
 
 	playsound(src.loc, 'sound/machines/blastdoor_close.ogg', 50, 1)
 	icon_state = "dmdrive_1"
 	flick("dmdrive_closing", src)
 	mode = 1
-	sleep (10)
-	bsdrivestatus = 0
 
 /obj/machinery/bluespacedrive/proc/bigboom()
 
+	GLOB.global_announcer.autosay("ERROR: BLUESPACE TEATHER SEVERED. CONTACT AN ENGINEER IMMIDEATELY.", "Auxiliary Bluespace Monitor")
 	mode = 0
-	bsdrivestatus = 7
 	var/turf/T = get_turf(src)
 	var/list/affected_z = GetConnectedZlevels(T.z)
 
@@ -137,10 +94,8 @@
 		mob.Weaken(4)
 		to_chat(mob, "<span class='danger'>An invisible force slams you against the ground!</span>")
 
-//emp
-	empulse(T, ceil(1000), ceil(9000))
+	empulse(T, ceil(100), ceil(900))
 
-//explosion
 	spawn(0)
 		explosion(T, 1.5, 3, 6, 12, 1)
 		qdel(src)
@@ -170,13 +125,11 @@
 
 /obj/machinery/bluespacedrive/physical_attack_hand(mob/user)
 
-	if(bsdrivestatus > -1 && bsdrivestatus < 3 && anchored == 1)
+	if (anchored == TRUE)
 		user.visible_message("<span class=\"warning\">[user] flips the control switch on the [src].</span>", "<span class=\"warning\">You flip the control switch.")
-		bsdrivestatus = -1
 		if (mode == 1)
 			open()
 			return
-		if (mode == 2)
-			close()
+		close()
 	else
 		user.visible_message("[user] attempts to flip the mode switch on the [src], but it doesn't budge.", "You try flipping the mode switch, but it doesn't budge.")
