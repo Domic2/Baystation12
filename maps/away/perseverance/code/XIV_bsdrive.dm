@@ -8,6 +8,7 @@
 	var/phcheck = null//0 = no phoron, 1 = enough phoron, 2 = too much phoron
 	var/mode = 1 //2 is active, actively takes phoron from the air, takes minor coordination for a big time save. A bit risky.
 	// 1 is passive, it requires some phoron to be present only when jumping, but also needs a much longer spoolup time .
+	var/bsdrivestatus = null
 
 /obj/machinery/bluespacedrive/Process()
 
@@ -94,7 +95,7 @@
 		mob.Weaken(4)
 		to_chat(mob, "<span class='danger'>An invisible force slams you against the ground!</span>")
 
-	empulse(T, ceil(100), ceil(900))
+	empulse(T, 10, 90)
 
 	spawn(0)
 		explosion(T, 1.5, 3, 6, 12, 1)
