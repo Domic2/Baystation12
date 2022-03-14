@@ -3,24 +3,11 @@
 
 //--------------------------AIRLOCKS----------------------------------
 
+/*
 obj/machinery/door/airlock/external/bolted/xiv
 	name = "Perseverance Exterior Access"
 	frequency = 1379
-
-/obj/machinery/embedded_controller/radio/airlock/airlock_controller/xiv
-	frequency = 1379
-	req_access = list ("ACCESS_XION")
-
-obj/machinery/airlock_sensor/xiv
-	frequency = 1379
-
-obj/machinery/access_button/airlock_exterior/xiv
-	frequency = 1379
-	req_access = list ("ACCESS_XION")
-
-obj/machinery/access_button/airlock_interior/xiv
-	frequency = 1379
-	req_access = list ("ACCESS_XION")
+*/
 
 //-------------------------TANK CONTROL-------------------------------
 
@@ -81,7 +68,7 @@ obj/machinery/atmospherics/unary/outlet_injector/preset
 	icon_state = "map_vent_out"
 	id_tag = "ventilation_in"
 	external_pressure_bound = 1.1 * ONE_ATMOSPHERE
-	external_pressure_bound_default = 1.1 * ONE_ATMOSPHERE//turns out defaults don't matter at all when being operated by the air control computer, "default pressure" is always approx. 4500 kPa
+	external_pressure_bound_default = 1.1 * ONE_ATMOSPHERE
 	pump_direction = 1
 
 /obj/machinery/atmospherics/unary/vent_pump/tank/xiv/ventilation/outlet

@@ -1,5 +1,3 @@
-//!! - change this when making new elevators
-
 /datum/shuttle/autodock/ferry/xiv
 	flags = SHUTTLE_FLAGS_PROCESS
 	defer_initialisation = TRUE
@@ -20,7 +18,7 @@
 
 /datum/shuttle/autodock/ferry/xiv/central_lift
 	name = "Perseverance Central Lift"
-	shuttle_area = /area/ship/perseverance/lift //!!
+	shuttle_area = /area/ship/perseverance/lift
 	waypoint_station = "nav_xiv_cargo_lift_bottom"
 	waypoint_offsite = "nav_xiv_cargo_lift_top"
 	sound_takeoff = 'sound/effects/lift_heavy_start.ogg'
@@ -30,13 +28,13 @@
 	name = "Ventilation Deck"
 	landmark_tag = "nav_xiv_cargo_lift_top"
 	flags = SLANDMARK_FLAG_AUTOSET
-	base_area = /area/ship/perseverance/lifttop //!!
+	base_area = /area/ship/perseverance/lifttop
 	base_turf = /turf/simulated/open
 
 /obj/effect/shuttle_landmark/lift/xiv/central_bottom
 	name = "Operations Deck"
 	landmark_tag = "nav_xiv_cargo_lift_bottom"
-	base_area = /area/ship/perseverance/hall/chall //!!
+	base_area = /area/ship/perseverance/hall/chall
 	base_turf = /turf/simulated/floor/plating
 
 //warehouse

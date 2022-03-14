@@ -1,11 +1,11 @@
-/obj/item/clothing/under/XIV
+/obj/item/clothing/under/xiv
 	icon = 'maps/away/perseverance/icons/clothes/XIVitem.dmi'
 	item_icons = list(slot_w_uniform_str = 'maps/away/perseverance/icons/clothes/XIVunder.dmi')
 	sprite_sheets = list(
 		SPECIES_UNATHI = 'maps/away/perseverance/icons/clothes/XIVunathi.dmi'
 		)
 
-/obj/item/clothing/under/XIV/xion
+/obj/item/clothing/under/xiv/xion
 	name = "xion jumpsuit"
 	desc = "A relatively protecive utility jumpsuit produced by Xion Industries."
 	icon_state = "xion"
@@ -15,7 +15,7 @@
 		rad = ARMOR_RAD_MINOR
 		)
 
-/obj/item/clothing/under/XIV/xionplus
+/obj/item/clothing/under/xiv/xionplus
 	name = "xion command suit"
 	desc = "A special suit used by higher-ranking xion employees."
 	icon_state = "manage"
@@ -27,5 +27,5 @@
 		melee = ARMOR_MELEE_SMALL
 		)
 
-/obj/item/clothing/under/rank/medical/XIV
+/obj/item/clothing/under/rank/medical/xiv
 	name = "field physician's jumpsuit"

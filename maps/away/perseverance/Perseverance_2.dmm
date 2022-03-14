@@ -4680,7 +4680,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/bridge/ahallway)
 "vO" = (
-/turf/simulated/wall/r_wall/hull/white,
+/turf/simulated/wall/r_wall/white,
 /area/ship/perseverance/eng/fuelbay/upper)
 "vU" = (
 /obj/structure/cable{
@@ -4723,7 +4723,7 @@
 	},
 /obj/machinery/light,
 /obj/structure/decoy/broken{
-	name = "E-TAS-1"
+	name = "E-TAS"
 	},
 /turf/simulated/floor/greengrid,
 /area/ship/perseverance/bridge/aicore)
@@ -7312,9 +7312,8 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/workshop)
 "Ha" = (
-/obj/machinery/atmospherics/unary/outlet_injector/waste{
-	dir = 1
-	},
+/obj/effect/wallframe_spawn/reinforced/hull/white,
+/obj/machinery/atmospherics/pipe/simple/visible/black,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/fuelbay/upper)
 "Hb" = (
@@ -8879,6 +8878,15 @@
 /obj/item/stock_parts/circuitboard/recharge_station,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/workshopstore)
+"Nv" = (
+/obj/structure/cable{
+	d1 = 6;
+	d2 = 8;
+	icon_state = "6-8"
+	},
+/mob/living/silicon/robot/drone,
+/turf/simulated/floor/plating,
+/area/ship/perseverance/ventilation/red/fore)
 "Nw" = (
 /obj/machinery/power/apc/super{
 	dir = 1
@@ -9081,7 +9089,7 @@
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/bridge/bluespacedrive)
 "Oj" = (
-/turf/simulated/wall/r_wall/white,
+/turf/simulated/wall/r_wall/hull/white,
 /area/ship/perseverance/eng/fuelbay/upper)
 "Ok" = (
 /obj/effect/floor_decal/industrial/warning{
@@ -10994,8 +11002,9 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/midship/robotics)
 "VS" = (
-/obj/effect/wallframe_spawn/reinforced/hull/white,
-/obj/machinery/atmospherics/pipe/simple/visible/black,
+/obj/machinery/atmospherics/unary/outlet_injector/waste{
+	dir = 1
+	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/eng/fuelbay/upper)
 "VT" = (
@@ -30737,7 +30746,7 @@ dg
 yi
 zG
 dg
-ch
+Nv
 Rl
 XS
 Fy
@@ -32040,9 +32049,9 @@ OB
 Da
 ag
 ag
-ag
-Oj
 vO
+Oj
+aa
 aa
 aa
 aa
@@ -32242,9 +32251,9 @@ vF
 Id
 zW
 zW
-zW
-VS
 Ha
+VS
+aa
 aa
 aa
 aa
@@ -32444,9 +32453,9 @@ OB
 zu
 ag
 ag
-ag
-Oj
 vO
+Oj
+aa
 aa
 aa
 aa

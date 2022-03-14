@@ -279,7 +279,7 @@
 
 //Blue double emergency tank
 
-/obj/item/tank/emergency/oxygen/double/blue
+/obj/item/tank/oxygen_emergency_double/blue
 	icon = 'maps/away/perseverance/icons/obj/tanks.dmi'
 	icon_state = "emergency_double_blue"
 
@@ -290,6 +290,7 @@ obj/machinery/atmospherics/unary/outlet_injector/waste
 	icon_state = "on"
 	use_power = 1
 
+/*
 //uses New() instead of Initialize(), and it does not work (when initialized). This fixes it.
 /turf/space/transit/east/Initialize()
 	..()
@@ -304,10 +305,12 @@ obj/machinery/atmospherics/unary/outlet_injector/waste
 /obj/machinery/light/navigation//check your layers!
 	layer = MOUSETRAP_LAYER
 
+
 /obj/structure/plasticflaps/airtight/Initialize() // Airtight my ass, lets make this actually work
 	var/turf/T = get_turf(loc)
 	if(T)
 		T.blocks_air = 1
+*/
 
 /obj/structure/decoy/broken
 	icon_state = "ai-static"
