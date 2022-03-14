@@ -1,5 +1,4 @@
-//Vents, lotsa code so I guess I better put it in a seperate part
-
+// merge with ladders pls
 /obj/structure/vent
 	name = "vent"
 	desc = "A vent. Watch your step."
@@ -25,8 +24,6 @@
 			if(L.allowed_directions & UP)
 				target_down = L
 				L.target_up = src
-//				var/turf/T = get_turf(src)
-//				T.ReplaceWithLattice() (why???)
 				return
 	update_icon()
 
@@ -222,7 +219,7 @@
 //up we go
 
 /obj/structure/vent/up
-	desc = "It's a vent. Really dark up there."
+	desc = "It's a vent. Watch out for drooling aliens."
 	allowed_directions = UP
 	alpha = 100
 	layer = 5//it's above everything else, except ghosts, and areas

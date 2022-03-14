@@ -102,27 +102,9 @@ obj/machinery/atmospherics/unary/outlet_injector/xiv/fuel
 
 obj/machinery/atmospherics/unary/vent_pump/high_volume/xiv/combust
 	icon_state = "map_vent_out"
-	external_pressure_bound = MAX_PUMP_PRESSURE
-	external_pressure_bound_default = MAX_PUMP_PRESSURE
+	external_pressure_bound = 10000
+	external_pressure_bound_default = 10000
 	use_power = 1
 	pump_direction = 1
 	pressure_checks = 1//check exterior only
 	pressure_checks_default = 1
-
-//experimental gas thruster
-
-/obj/machinery/atmospherics/unary/engine/experimental
-	name = "experimental rocket nozzle"
-	desc = "Experimental rocket nozzle, expelling gas at hypersonic velocities to propell the ship."
-
-/obj/machinery/atmospherics/unary/engine/experimental/calculate_thrust(datum/gas_mixture/propellant, used_part = 1)
-	return round(sqrt(propellant.get_mass() * used_part) + (air_contents.return_pressure() / 10000),0.1)
-
-/obj/item/stock_parts/circuitboard/unary_atmos/engine/experimental
-	name = T_BOARD("experimental gas thruster")
-	build_path = /obj/machinery/atmospherics/unary/engine/experimental
-	origin_tech = list(TECH_POWER = 10, TECH_ENGINEERING = 10)
-	additional_spawn_components = list(
-		/obj/item/stock_parts/matter_bin = 1,
-		/obj/item/stock_parts/micro_laser/ultra = 2,
-		/obj/item/stock_parts/capacitor = 2)

@@ -8,7 +8,6 @@
 	var/phcheck = null//0 = no phoron, 1 = enough phoron, 2 = too much phoron
 	var/mode = 1 //2 is active, actively takes phoron from the air, takes minor coordination for a big time save. A bit risky.
 	// 1 is passive, it requires some phoron to be present only when jumping, but also needs a much longer spoolup time .
-	var/bsdrivestatus = null
 
 /obj/machinery/bluespacedrive/Process()
 
@@ -27,18 +26,19 @@
 		if (phinair > 85)
 			overlays = list("ind4")
 		if (phinair > 95)
-			if (mode == 2)
-				bigboom()
+			if (modecheck())
 				return
 			overlays = list("uhoh")
 	else
+		if (mode == 2)
+			bigboom()
+			return
 		phcheck = 0
 		overlays = list("ind0")
 
 	if (air.total_moles - air.gas[GAS_PHORON] > 10)
 		contaminated = 1
-		if (mode == 2)
-			bigboom()
+		if (modecheck())
 			return
 		overlays = list("uhoh")
 	else
@@ -58,9 +58,13 @@
 			var/effect = max(0, min(200, 9 * sqrt( 1 / max(1,get_dist(subject, src)))) )
 			subject.adjust_hallucination(effect, 0.25 * effect)
 
-/obj/machinery/bluespacedrive/proc/open()
+/obj/machinery/bluespacedrive/proc/modecheck()
+	if (mode == 2)
+		bigboom()
+		return TRUE
+	return FALSE
 
-	GLOB.global_announcer.autosay("WARNING: BLUESPACE DRIVE ENTERING RAPID REACTION MODE.", "Auxiliary Bluespace Monitor")
+/obj/machinery/bluespacedrive/proc/open()
 
 	mode = 2
 	playsound(src.loc,'sound/machines/blastdoor_open.ogg', 50, 1)
@@ -76,7 +80,7 @@
 
 /obj/machinery/bluespacedrive/proc/bigboom()
 
-	GLOB.global_announcer.autosay("ERROR: BLUESPACE TEATHER SEVERED. CONTACT AN ENGINEER IMMIDEATELY.", "Auxiliary Bluespace Monitor")
+	STOP_PROCESSING(SSmachines, src)
 	mode = 0
 	var/turf/T = get_turf(src)
 	var/list/affected_z = GetConnectedZlevels(T.z)
@@ -95,7 +99,7 @@
 		mob.Weaken(4)
 		to_chat(mob, "<span class='danger'>An invisible force slams you against the ground!</span>")
 
-	empulse(T, 10, 90)
+	empulse(T, 40, 120)
 
 	spawn(0)
 		explosion(T, 1.5, 3, 6, 12, 1)
@@ -106,7 +110,7 @@
 /obj/machinery/bluespacedrive/attackby(obj/item/P as obj, mob/user as mob)
 
 	if(isWrench(P))
-		if(bsdrivestatus > -1 && bsdrivestatus < 2)
+		if(mode != 1)
 			user.visible_message("[user] attempts to unwrench the anchoring bolts on the [src], but the safety system keeps them down.", "You try unwrenching the anchoring bolts, but the safety system keeps them locked in place.")
 			return
 		if(anchored == 1)
@@ -117,17 +121,18 @@
 			if(!src || !user) return
 			if(anchored == 1)
 				user.visible_message("[user] unwrenches the anchoring bolts on the [src].", "You unwrench the anchoring bolts.")
-				log_and_message_admins("[user] unwrenched the blespace drive at [x], [y], [z]")
 				anchored = 0
 			else
 				user.visible_message("[user] wrenches the anchoring bolts on the [src].", "You wrench the anchoring bolts.")
-				log_and_message_admins("[user] wrenched the blespace drive at [x], [y], [z]")
 				anchored = 1
 
 /obj/machinery/bluespacedrive/physical_attack_hand(mob/user)
 
 	if (anchored == TRUE)
-		user.visible_message("<span class=\"warning\">[user] flips the control switch on the [src].</span>", "<span class=\"warning\">You flip the control switch.")
+		user.visible_message(
+			SPAN_WARNING(">[user] flips the control switch on the [src]."),
+			SPAN_WARNING(">You flip the control switch.")
+			)
 		if (mode == 1)
 			open()
 			return

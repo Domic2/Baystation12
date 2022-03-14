@@ -98,7 +98,7 @@
 /obj/item/device/radio/headset/contractor
 	name = "contractor headset"
 	desc = "A cheap headset usually seen on small ships."
-	item_state = "cargo_headset" //alt looks bad on nonhumans
+	item_state = "cargo_headset"
 	icon_state = "cargo_headset"
 	max_keys = 0
 
@@ -142,7 +142,6 @@
 	icon_state = "r-wingrille"
 	frame_path = /obj/structure/wall_frame/orange
 
-// Setting these two up as hull should make them do the special space-facing decay effet. Addendum: no effect on wallframes
 /obj/effect/wallframe_spawn/reinforced/hull/white
 	name = "white reinforced wall frame window spawner"
 	icon_state = "r-wingrille"
@@ -309,3 +308,13 @@ obj/machinery/atmospherics/unary/outlet_injector/waste
 	var/turf/T = get_turf(loc)
 	if(T)
 		T.blocks_air = 1
+
+/obj/structure/decoy/broken
+	icon_state = "ai-static"
+	desc = "It's broken."
+
+/obj/structure/fakenuke
+	name = "self-destruct terminal"
+	desc = "For when it all gets too much to bear. The interface is non-responsive."
+	icon = 'icons/obj/nuke_station.dmi'
+	icon_state = "idle"

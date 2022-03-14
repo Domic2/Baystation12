@@ -62,7 +62,7 @@
 
 /obj/effect/overmap/visitable/ship/landable/science
 	name = "XIV Phobos"
-	desc = "An E-CB science shuttle most commonly used for small-scale archeology and exploration projects. Exterior writing reads 'XIV Phobos'. No transponder signal detected."
+	desc = "An E-CB science shuttle commonly used for small-scale archeology and exploration projects. Exterior writing reads 'XIV Phobos'. No transponder signal detected."
 	shuttle = "Phobos"
 	max_speed = 1/(1 SECONDS)
 	burn_delay = 3 SECONDS

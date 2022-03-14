@@ -1447,7 +1447,9 @@
 /turf/simulated/floor/redgrid,
 /area/ship/perseverance/bridge/selfdestruct)
 "hq" = (
-/obj/machinery/nuke_cylinder_dispenser,
+/obj/machinery/nuke_cylinder_dispenser{
+	req_access = list("ACCESS_VAULT", "ACCESS_XION")
+	},
 /obj/effect/floor_decal/industrial/warning/full,
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/bridge/selfdestruct)
@@ -1686,10 +1688,10 @@
 /turf/simulated/wall/prepainted,
 /area/ship/perseverance/sec/top/pmid)
 "iX" = (
-/obj/structure/table/standard,
-/obj/item/pen/red,
-/obj/item/pen/blue,
-/turf/simulated/floor/tiled/dark,
+/obj/item/mop,
+/obj/structure/table/rack,
+/obj/item/reagent_containers/glass/bucket,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/ship/perseverance/sci/observation)
 "iY" = (
 /obj/structure/cable{
@@ -2488,7 +2490,7 @@
 /obj/structure/table/rack,
 /obj/item/wirecutters/clippers,
 /obj/item/wirecutters/clippers,
-/turf/simulated/floor/tiled/monotile,
+/turf/simulated/floor/plating,
 /area/ship/perseverance/midship/hydroponics)
 "mE" = (
 /obj/item/material/hatchet,
@@ -2496,7 +2498,7 @@
 /obj/structure/table/rack,
 /obj/item/material/hatchet,
 /obj/item/material/minihoe,
-/turf/simulated/floor/tiled/monotile,
+/turf/simulated/floor/plating,
 /area/ship/perseverance/midship/hydroponics)
 "mH" = (
 /obj/structure/closet/emcloset,
@@ -2510,7 +2512,7 @@
 /area/ship/perseverance/midship/hydroponics)
 "mJ" = (
 /obj/structure/closet/crate/hydroponics/prespawned,
-/turf/simulated/floor/tiled/monotile,
+/turf/simulated/floor/plating,
 /area/ship/perseverance/midship/hydroponics)
 "mK" = (
 /obj/effect/floor_decal/industrial/warning/fulltile,
@@ -2550,7 +2552,7 @@
 /obj/item/clothing/gloves/thick/botany,
 /obj/item/clothing/suit/apron/overalls,
 /obj/item/clothing/suit/apron/overalls,
-/turf/simulated/floor/tiled/monotile,
+/turf/simulated/floor/plating,
 /area/ship/perseverance/midship/hydroponics)
 "mT" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -2673,7 +2675,6 @@
 /area/ship/perseverance/ventilation/blue/fore)
 "nr" = (
 /obj/structure/table/standard,
-/obj/item/blueprints,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/bridge/fhallway)
 "ns" = (
@@ -2858,6 +2859,7 @@
 /area/ship/perseverance/ventilation/blue/fore)
 "og" = (
 /obj/machinery/seed_storage/garden,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/midship/hydroponics)
 "oh" = (
@@ -3140,7 +3142,7 @@
 /turf/simulated/floor/airless,
 /area/ship/perseverance/eng/fuelbay/port_upper)
 "po" = (
-/turf/simulated/open/xiv/hydrogen,
+/turf/simulated/open/xiv/oxygen,
 /area/ship/perseverance/eng/fuelbay/port_upper)
 "pp" = (
 /obj/structure/lattice,
@@ -3260,7 +3262,7 @@
 	dir = 8
 	},
 /obj/effect/floor_decal/industrial/outline/yellow,
-/turf/simulated/floor/tiled/monotile,
+/turf/simulated/floor/plating,
 /area/ship/perseverance/eng/atmos_mixing)
 "pQ" = (
 /obj/structure/ladder,
@@ -3779,6 +3781,14 @@
 /obj/structure/flora/grass/both,
 /turf/simulated/floor/grass,
 /area/ship/perseverance/sci/observation)
+"rU" = (
+/obj/effect/floor_decal/industrial/outline/grey,
+/obj/machinery/atmospherics/portables_connector{
+	dir = 8
+	},
+/obj/machinery/portable_atmospherics/canister/empty,
+/turf/simulated/floor/tiled/monotile/airless,
+/area/ship/perseverance/eng/fuelbay/upper)
 "rV" = (
 /obj/structure/cable{
 	d1 = 1;
@@ -4038,12 +4048,12 @@
 /turf/simulated/open/xiv/airless,
 /area/ship/perseverance/eng/fuelbay/upper)
 "sZ" = (
-/obj/machinery/power/apc/super,
-/obj/structure/cable{
-	icon_state = "0-4"
+/obj/machinery/atmospherics/binary/passive_gate{
+	dir = 8;
+	name = "oxygen pressure regulator"
 	},
-/turf/simulated/floor/plating,
-/area/ship/perseverance/eng/fuelbay/port_upper)
+/turf/simulated/floor/tiled/monotile/airless,
+/area/ship/perseverance/eng/fuelbay/upper)
 "ta" = (
 /obj/structure/cable{
 	d1 = 2;
@@ -4515,6 +4525,7 @@
 /area/ship/perseverance/midship/xenoflora)
 "vb" = (
 /obj/machinery/vending/hydronutrients/generic,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/midship/hydroponics)
 "vc" = (
@@ -4587,7 +4598,6 @@
 /obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 1;
 	name = "Thrust Chamber Seven Outlet Control Console";
-	out_pressure_mode = 0;
 	output_tag = "C_7_out";
 	sensor_name = "Thrust chamber seven air sensor";
 	sensor_tag = "C_7_sensor"
@@ -4639,14 +4649,12 @@
 /turf/simulated/floor/tiled/dark,
 /area/ship/perseverance/midship/robotics)
 "vE" = (
-/obj/structure/lattice,
+/obj/machinery/power/apc/super,
 /obj/structure/cable{
-	d1 = 32;
-	d2 = 4;
-	icon_state = "32-4"
+	icon_state = "0-4"
 	},
-/turf/simulated/open/xiv/airless,
-/area/ship/perseverance/eng/fuelbay/starboard_upper)
+/turf/simulated/floor/plating,
+/area/ship/perseverance/eng/fuelbay/port_upper)
 "vF" = (
 /obj/machinery/atmospherics/pipe/simple/visible/fuel{
 	dir = 8
@@ -4714,6 +4722,9 @@
 	pixel_x = -22
 	},
 /obj/machinery/light,
+/obj/structure/decoy/broken{
+	name = "E-TAS-1"
+	},
 /turf/simulated/floor/greengrid,
 /area/ship/perseverance/bridge/aicore)
 "we" = (
@@ -5245,10 +5256,7 @@
 /turf/space,
 /area/space)
 "yp" = (
-/obj/structure/bed/chair/office/light{
-	dir = 8
-	},
-/turf/simulated/floor/tiled/dark,
+/turf/simulated/floor/tiled/white,
 /area/ship/perseverance/sci/observation)
 "yq" = (
 /obj/structure/catwalk,
@@ -6175,6 +6183,7 @@
 /area/ship/perseverance/midship/xenoflora)
 "Ci" = (
 /obj/machinery/beehive,
+/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/midship/hydroponics)
 "Ck" = (
@@ -6315,6 +6324,7 @@
 /obj/item/device/scanner/price,
 /obj/item/device/uv_light,
 /obj/item/device/measuring_tape,
+/obj/item/crowbar/brace_jack,
 /turf/simulated/floor/plating,
 /area/ship/perseverance/bridge/storage)
 "CN" = (
@@ -6780,7 +6790,6 @@
 /obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 8;
 	name = "Thrust Chamber Eight Outlet Control Console";
-	out_pressure_mode = 0;
 	output_tag = "C_8_out";
 	sensor_name = "Thrust chamber eight air sensor";
 	sensor_tag = "C_8_sensor"
@@ -6885,7 +6894,7 @@
 /turf/simulated/floor/tiled,
 /area/ship/perseverance/bridge/bluespacedrive)
 "Fn" = (
-/turf/simulated/open/xiv/oxygen,
+/turf/simulated/open/xiv/hydrogen,
 /area/ship/perseverance/eng/fuelbay/port_upper)
 "Fo" = (
 /obj/structure/lattice,
@@ -7441,6 +7450,7 @@
 	},
 /obj/machinery/button/blast_door{
 	id_tag = "bsblastdoor";
+	pixel_x = -16;
 	pixel_y = 28
 	},
 /obj/machinery/meter,
@@ -7973,6 +7983,17 @@
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/bridge/bluespacedrive)
+"JP" = (
+/obj/machinery/door/window/southright{
+	req_access = list("ACCESS_XION")
+	},
+/obj/effect/floor_decal/industrial/hatch/yellow,
+/obj/machinery/button{
+	name = "bluespace jump control";
+	pixel_y = 26
+	},
+/turf/simulated/floor/reinforced/airless,
+/area/ship/perseverance/bridge/bluespacedrive)
 "JQ" = (
 /turf/simulated/wall/r_wall/white,
 /area/ship/perseverance/sec/top/pmid)
@@ -8006,7 +8027,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/ventilation/blue/aft)
 "JV" = (
-/obj/machinery/atmospherics/unary/engine/experimental{
+/obj/machinery/atmospherics/unary/engine{
 	dir = 1
 	},
 /turf/simulated/floor/airless,
@@ -8195,7 +8216,7 @@
 	},
 /obj/machinery/atmospherics/unary/vent_pump/high_volume/xiv{
 	dir = 8;
-	id_tag = "bluespacefrive_out"
+	id_tag = "bluespacedrive_out"
 	},
 /turf/simulated/floor/reinforced/airless,
 /area/ship/perseverance/bridge/bluespacedrive)
@@ -8275,12 +8296,14 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/ship/perseverance/bridge/study)
 "KW" = (
-/obj/machinery/power/apc/super,
+/obj/structure/lattice,
 /obj/structure/cable{
-	icon_state = "0-8"
+	d1 = 32;
+	d2 = 8;
+	icon_state = "32-8"
 	},
-/turf/simulated/floor/plating,
-/area/ship/perseverance/eng/fuelbay/starboard_upper)
+/turf/simulated/open/xiv/airless,
+/area/ship/perseverance/eng/fuelbay/port_upper)
 "KX" = (
 /obj/machinery/atmospherics/omni/mixer{
 	tag_east = 1;
@@ -8809,7 +8832,6 @@
 /obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 1;
 	name = "Thrust Chamber Two Outlet Control Console";
-	out_pressure_mode = 0;
 	output_tag = "C_2_out";
 	sensor_name = "Thrust chamber two air sensor";
 	sensor_tag = "C_2_sensor"
@@ -8833,7 +8855,11 @@
 /turf/simulated/floor/tiled/dark,
 /area/ship/perseverance/bridge/navigation)
 "Np" = (
-/turf/simulated/floor/tiled/dark,
+/obj/machinery/atmospherics/pipe/simple/hidden/black{
+	dir = 4
+	},
+/obj/structure/bed/chair/office/light,
+/turf/simulated/floor/tiled/white,
 /area/ship/perseverance/sci/observation)
 "Nr" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -8877,7 +8903,6 @@
 /obj/machinery/computer/air_control/xiv/ventilation{
 	dir = 4;
 	name = "Thrust Chamber One Outlet Control Console";
-	out_pressure_mode = 0;
 	output_tag = "C_1_out";
 	sensor_name = "Thrust chamber one air sensor";
 	sensor_tag = "C_1_sensor"
@@ -9491,11 +9516,11 @@
 /turf/simulated/wall/r_wall/prepainted,
 /area/ship/perseverance/bridge/storage)
 "PS" = (
+/obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/atmospherics/binary/passive_gate{
 	dir = 8;
-	name = "hydrogen pressure regulator"
+	name = "oxygen pressure regulator"
 	},
-/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/monotile/airless,
 /area/ship/perseverance/eng/fuelbay/upper)
 "PT" = (
@@ -9652,12 +9677,6 @@
 /obj/machinery/meter,
 /turf/simulated/open/xiv/airless,
 /area/ship/perseverance/eng/fuelbay/upper)
-"QF" = (
-/obj/effect/floor_decal/corner/research{
-	dir = 5
-	},
-/turf/simulated/floor/tiled/dark,
-/area/ship/perseverance/sci/observation)
 "QG" = (
 /obj/machinery/power/apc{
 	dir = 1
@@ -9826,7 +9845,7 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/ventilation/blue/aft)
 "Rp" = (
-/obj/machinery/atmospherics/unary/engine/experimental{
+/obj/machinery/atmospherics/unary/engine{
 	dir = 1
 	},
 /turf/simulated/floor/airless,
@@ -9957,7 +9976,7 @@
 /turf/simulated/open/xiv/airless,
 /area/ship/perseverance/eng/fuelbay/starboard_upper)
 "RQ" = (
-/turf/simulated/open/xiv/hydrogen,
+/turf/simulated/open/xiv/oxygen,
 /area/ship/perseverance/eng/fuelbay/starboard_upper)
 "RR" = (
 /turf/simulated/wall/prepainted,
@@ -9966,11 +9985,11 @@
 /obj/structure/lattice,
 /obj/structure/cable{
 	d1 = 32;
-	d2 = 8;
-	icon_state = "32-8"
+	d2 = 4;
+	icon_state = "32-4"
 	},
 /turf/simulated/open/xiv/airless,
-/area/ship/perseverance/eng/fuelbay/port_upper)
+/area/ship/perseverance/eng/fuelbay/starboard_upper)
 "RU" = (
 /obj/structure/cable{
 	icon_state = "1-2"
@@ -10235,8 +10254,10 @@
 /turf/simulated/floor/airless,
 /area/ship/perseverance/eng/fuelbay/upper)
 "Tb" = (
-/obj/structure/reagent_dispensers/watertank,
-/turf/simulated/floor/tiled/dark/monotile,
+/obj/structure/table/standard,
+/obj/item/pen,
+/obj/item/paper_bin,
+/turf/simulated/floor/tiled/dark,
 /area/ship/perseverance/sci/observation)
 "Tc" = (
 /obj/machinery/computer/operating,
@@ -10253,10 +10274,8 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/midship/chemistry)
 "Te" = (
-/obj/structure/table/standard,
-/obj/item/pen,
-/obj/item/paper_bin,
-/turf/simulated/floor/tiled/dark,
+/obj/structure/reagent_dispensers/watertank,
+/turf/simulated/floor/tiled/dark/monotile,
 /area/ship/perseverance/sci/observation)
 "Tf" = (
 /obj/structure/cable{
@@ -10441,8 +10460,8 @@
 /turf/simulated/floor/tiled,
 /area/ship/perseverance/midship/hydroponics)
 "TS" = (
-/obj/machinery/atmospherics/pipe/manifold4w/visible/yellow,
 /obj/machinery/meter,
+/obj/machinery/atmospherics/pipe/manifold4w/visible/yellow,
 /turf/simulated/floor/tiled/monotile/airless,
 /area/ship/perseverance/eng/fuelbay/upper)
 "TT" = (
@@ -10828,8 +10847,8 @@
 /turf/simulated/floor/tiled/monotile/airless,
 /area/ship/perseverance/eng/fuelbay/upper)
 "Vt" = (
-/obj/machinery/nuclearbomb/station,
 /obj/effect/floor_decal/industrial/warning/full,
+/obj/structure/fakenuke,
 /turf/simulated/floor/tiled/monotile,
 /area/ship/perseverance/bridge/selfdestruct)
 "Vu" = (
@@ -10880,10 +10899,10 @@
 /turf/simulated/floor/tiled/white,
 /area/ship/perseverance/midship/chemistry)
 "VD" = (
-/obj/item/mop,
-/obj/structure/table/rack,
-/obj/item/reagent_containers/glass/bucket,
-/turf/simulated/floor/tiled/dark/monotile,
+/obj/structure/table/standard,
+/obj/item/pen/red,
+/obj/item/pen/blue,
+/turf/simulated/floor/tiled/dark,
 /area/ship/perseverance/sci/observation)
 "VE" = (
 /obj/machinery/alarm{
@@ -11635,11 +11654,11 @@
 /turf/simulated/floor/plating,
 /area/ship/perseverance/ventilation/blue/fore)
 "Yy" = (
+/obj/effect/floor_decal/industrial/outline/grey,
 /obj/machinery/atmospherics/binary/passive_gate{
 	dir = 8;
-	name = "oxygen pressure regulator"
+	name = "hydrogen pressure regulator"
 	},
-/obj/effect/floor_decal/industrial/outline/grey,
 /turf/simulated/floor/tiled/monotile/airless,
 /area/ship/perseverance/eng/fuelbay/upper)
 "Yz" = (
@@ -11908,7 +11927,7 @@
 /turf/simulated/floor/tiled/dark/monotile,
 /area/ship/perseverance/eng/workshop)
 "Zv" = (
-/turf/simulated/open/xiv/oxygen,
+/turf/simulated/open/xiv/hydrogen,
 /area/ship/perseverance/eng/fuelbay/starboard_upper)
 "Zz" = (
 /obj/effect/floor_decal/industrial/hatch/yellow,
@@ -12023,6 +12042,13 @@
 	},
 /turf/simulated/floor/plating,
 /area/ship/perseverance/ventilation/blue/mid)
+"ZU" = (
+/obj/machinery/power/apc/super,
+/obj/structure/cable{
+	icon_state = "0-8"
+	},
+/turf/simulated/floor/plating,
+/area/ship/perseverance/eng/fuelbay/starboard_upper)
 "ZV" = (
 /obj/machinery/atmospherics/pipe/manifold4w/visible,
 /obj/machinery/meter,
@@ -27974,9 +28000,9 @@ ar
 ar
 ap
 ar
-ar
 Km
 oZ
+aa
 aa
 aa
 aa
@@ -28176,9 +28202,9 @@ ap
 ap
 ap
 ap
-ap
 Km
 oZ
+aa
 aa
 aa
 aa
@@ -28378,9 +28404,9 @@ ar
 ar
 ap
 ar
-ar
 Km
 oZ
+aa
 aa
 aa
 aa
@@ -28580,9 +28606,9 @@ ar
 ar
 ap
 ar
-ar
 Km
 oZ
+aa
 aa
 aa
 aa
@@ -28781,10 +28807,10 @@ UI
 ar
 ar
 ap
-ar
-sZ
+vE
 Km
 oZ
+aa
 aa
 aa
 aa
@@ -28983,10 +29009,10 @@ UI
 ap
 ap
 ap
-ap
-RT
+KW
 Km
 oZ
+aa
 aa
 aa
 aa
@@ -29186,9 +29212,9 @@ ar
 ar
 ap
 ar
-ar
 Km
 oZ
+aa
 aa
 aa
 aa
@@ -29388,9 +29414,9 @@ ar
 ar
 ap
 ar
-ar
 Km
 oZ
+aa
 aa
 aa
 aa
@@ -29590,9 +29616,9 @@ ar
 ar
 ap
 ar
-ar
 Km
 oZ
+aa
 aa
 aa
 aa
@@ -32208,7 +32234,7 @@ zr
 UL
 UL
 zC
-RW
+rU
 NQ
 yW
 QE
@@ -32734,7 +32760,7 @@ Su
 ln
 gb
 XS
-XS
+JP
 Hw
 JB
 Hw
@@ -33823,7 +33849,7 @@ ag
 ag
 ag
 Tq
-Tq
+sZ
 PS
 Yy
 qs
@@ -34842,9 +34868,9 @@ aw
 aw
 Sv
 aw
-aw
 rY
 AY
+aa
 aa
 aa
 aa
@@ -35044,9 +35070,9 @@ aw
 aw
 Sv
 aw
-aw
 rY
 AY
+aa
 aa
 aa
 aa
@@ -35246,9 +35272,9 @@ aw
 aw
 Sv
 aw
-aw
 rY
 AY
+aa
 aa
 aa
 aa
@@ -35447,10 +35473,10 @@ NI
 Sv
 Sv
 Sv
-Sv
-vE
+RT
 rY
 AY
+aa
 aa
 aa
 aa
@@ -35558,7 +35584,7 @@ jf
 XF
 Ya
 XF
-QF
+bz
 iX
 Te
 BS
@@ -35649,10 +35675,10 @@ NI
 aw
 aw
 Sv
-aw
-KW
+ZU
 rY
 AY
+aa
 aa
 aa
 aa
@@ -35760,9 +35786,9 @@ jf
 XF
 Ya
 XF
-QF
+bz
 yp
-Np
+QB
 cE
 al
 jo
@@ -35852,9 +35878,9 @@ aw
 aw
 Sv
 aw
-aw
 rY
 AY
+aa
 aa
 aa
 aa
@@ -36054,9 +36080,9 @@ aw
 aw
 Sv
 aw
-aw
 rY
 AY
+aa
 aa
 aa
 aa
@@ -36256,9 +36282,9 @@ Sv
 Sv
 Sv
 Sv
-Sv
 rY
 AY
+aa
 aa
 aa
 aa
@@ -36458,9 +36484,9 @@ aw
 aw
 Sv
 aw
-aw
 rY
 AY
+aa
 aa
 aa
 aa
@@ -37377,7 +37403,7 @@ XF
 Dh
 XF
 bz
-Bo
+Np
 VD
 BS
 pi
